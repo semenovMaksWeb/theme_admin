@@ -1,6 +1,15 @@
 export enum ComponentsTypes {
     CREATE_COMPONENT="CREATE_COMPONENT",
     RESET_COMPONENT="RESET_COMPONENT",
+    CREATE_DATA_COMPONENT="CREATE_DATA"
+}
+
+export interface CreateDataComponents{
+    type: ComponentsTypes.CREATE_DATA_COMPONENT,
+    payload: {
+        data: any,
+        id: number,
+    },
 }
 
 export interface CreateComponent{
@@ -16,7 +25,7 @@ export interface ResetComponents{
 
 
 
-export type ComponentsAction = CreateComponent | ResetComponents;
+export type ComponentsAction = CreateComponent | ResetComponents | CreateDataComponents;
 
 export interface ComponentsReducers {
     components: any

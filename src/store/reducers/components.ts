@@ -6,6 +6,17 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
             return { ...state, components: {...state.components,[action.payload.id]:action.payload.components } }
         case ComponentsTypes.RESET_COMPONENT:
             return { components: {} }
+        case  ComponentsTypes.CREATE_DATA_COMPONENT:
+            return  {
+                ...state,
+                components: {
+                    ...state.components,
+                        [action.payload.id]: {
+                        ...state.components[action.payload.id],
+                            data:action.payload.data
+                    }
+                }
+            }
         default:
             return state
     }

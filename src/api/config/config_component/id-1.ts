@@ -1,9 +1,7 @@
-import {indexApi} from "../../index-api";
-
-export const id_1 = {
+ export const id_1 = {
     id: 1,
     name: "Темы проектов",
-    api_url: indexApi["theme/get_all"],
+    api_url: "theme/get_all",
     schema:{
         id:{
             key: "id",
