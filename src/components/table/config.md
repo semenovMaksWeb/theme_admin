@@ -18,5 +18,5 @@
     }
     если button 
     {
-        button: конфиг кнопки
+        button: id
     }

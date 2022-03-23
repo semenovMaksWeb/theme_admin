@@ -20,6 +20,13 @@
             key: "description",
             title: "описание темы",
             type: "td",
+        },
+        delete:{
+            w:80,
+            key: "delete",
+            title: "удалить",
+            type: "button",
+            button:2,
         }
     }
 }
