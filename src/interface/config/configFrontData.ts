@@ -10,5 +10,6 @@ export interface FrontData{
 }
 export enum ResultFrontData{
     body="body",
-    params="params"
+    params="params",
+    all="all",
 }

@@ -4,6 +4,7 @@ import {fd_1} from "./fd_1";
 export function frontData(configFrontData:ConfigFrontData, content:any){
     const params:any = {};
     const body:any = {};
+    const all:any = {};
     for (const key in configFrontData) {
         const config:FrontData = configFrontData[key];
         if (config.type === 1){
@@ -18,7 +19,10 @@ export function frontData(configFrontData:ConfigFrontData, content:any){
         if (config.result === 'body'){
             body[key]= data;
         }
+        if (config.result === "all"){
+            all[key]= data;
+        }
     }
-    return {params, body};
+    return {params, body, all};
 }
 

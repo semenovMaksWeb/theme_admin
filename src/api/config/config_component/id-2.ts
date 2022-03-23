@@ -16,7 +16,20 @@
                              }
                          }
                     }
-               }
+               },
+              {
+                  name: "delete_table_row",
+                  params:{
+                      id:1,
+                      config:{
+                          id: {
+                              result: "all",
+                              type:1,
+                              name: 'id'
+                          }
+                      }
+                  }
+              }
           ]
       }
 }
