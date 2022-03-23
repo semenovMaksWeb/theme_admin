@@ -1,6 +1,9 @@
 export interface ConfigCallback{
     name: CallbackName;
-    params: {key:string};
+    params:{
+        [key: string]: any;
+    }
+
 }
 
 export enum CallbackName{
