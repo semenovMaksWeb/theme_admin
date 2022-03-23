@@ -1,5 +1,5 @@
 import React from "react";
-import {useActions} from "../../hook/use-actions";
+import "./styles/table.css"
 import {useTypeSelector} from "../../hook/use-typed-selector";
 import {createContent} from "./lib/create-dom/create-content";
 
