@@ -14,6 +14,7 @@
     name:{
         title: заголовок th,
         type: 'td, button',
+        w: ширина колонки
     }
     если button 
     {
