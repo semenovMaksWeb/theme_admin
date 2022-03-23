@@ -12,7 +12,7 @@ export function Table(props:any){
     const  {body, header} = createContent(table);
     return(
         <>
-            <div className="table">
+            <div className="table" data-id={table.id}>
                 <div className="table__header">
                     {header}
                 </div>
