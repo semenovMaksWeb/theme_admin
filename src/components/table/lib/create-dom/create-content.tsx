@@ -46,7 +46,7 @@ export function createContent(table:any){
                 </div>);
             }
         }
-        body.push(<div key={dataset.id} className="table__tr">{row}</div>);
+        body.push(<div key={dataset[table.key_main]} className="table__tr">{row}</div>);
     }
     return {
         header, body

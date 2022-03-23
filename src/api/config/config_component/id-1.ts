@@ -1,5 +1,6 @@
  export const id_1 = {
     id: 1,
+    key_main: 'id',
     name: "Темы проектов",
     api_url: "theme/get_all",
     schema:{
