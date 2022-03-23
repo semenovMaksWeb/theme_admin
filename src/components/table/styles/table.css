@@ -1,0 +1,46 @@
+:root{
+  --outline--table: 1px solid #000;
+
+  --outline--header:  1px solid #000;
+
+  --outline--th: 1px solid #000;
+  --outline--th-size:1px;
+
+  --outline--td: 1px solid #000;
+  --outline--td-size:1px;
+}
+
+
+.table{
+  outline: var(--outline--table);
+}
+
+.table__header{
+  outline: var(--outline--header);
+  display: flex;
+}
+.table__tr{
+  display: flex;
+  margin-top: 1px;
+
+}
+.table__th{
+  outline: var(--outline--th);
+  margin-left: var(--outline--th-size);
+}
+.table__td{
+  margin-left: var(--outline--td-size);
+  outline: var(--outline--td);
+}
+.table_elem{
+  padding: 2px;
+}
+/* багофикс css outline */
+.table .table__th:first-child{
+  margin-left: 0;
+}
+.table .table__tr .table_elem:first-child{
+  margin-left: 0;
+}
+/* багофикс css outline */
+
