@@ -8,6 +8,7 @@
 
   --outline--td: 1px solid #000;
   --outline--td-size:1px;
+  --width__elem: 40px;
 }
 
 
@@ -33,6 +34,7 @@
   outline: var(--outline--td);
 }
 .table_elem{
+  width: var(--width__elem);
   padding: 2px;
 }
 /* багофикс css outline */
