@@ -1,5 +1,6 @@
  export const id_2 = {
      id:2,
+     screen_visible:false,
      type: "button",
      text: "удалить",
      title: "удалить тему",

@@ -1,5 +1,6 @@
  export const id_1 = {
     id: 1,
+    screen_visible:false,
     type: "table",
     key_main: 'id',
     name: "Темы проектов",
