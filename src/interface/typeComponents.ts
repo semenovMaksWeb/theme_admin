@@ -1,5 +1,6 @@
 export enum TypeComponents{
     table="table",
     button="button",
-    container="container"
+    container="container",
+    form="form"
 }
