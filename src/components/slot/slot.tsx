@@ -4,11 +4,11 @@ import {Table} from "../table/table";
 import {Button} from "../button/button";
 import {Container} from "../container/container";
 
-export function slot(configScreen:any, container_check = false){
+export function slot(configScreen:any, check_screen_visible = false){
     const screen = [];
     for (const key in configScreen) {
         const elem = configScreen[key];
-        if (!elem.screen_visible && !container_check){
+        if (!elem.screen_visible && !check_screen_visible){
             continue;
         }
         if (elem.type === TypeComponents.table){
