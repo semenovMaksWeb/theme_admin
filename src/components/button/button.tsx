@@ -14,8 +14,8 @@ export function Button(props:any){
     if (!button){
         return  (<><div>кнопка не иницилизирована!</div> </>)
     }
-    const clickButton = async ()=>{
-        await Callback(button?.event?.click, props.context);
+    const clickButton = async (event:any)=>{
+        await Callback(event,button?.event?.click, props.context);
     }
     return(
         <>

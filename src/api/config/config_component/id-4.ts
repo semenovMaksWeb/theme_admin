@@ -39,7 +39,31 @@ export const id_4 = {
                          order: 3,
                          key: "button_save",
                          type: "button",
-                         text: "сохранить"
+                         text: "сохранить",
+                         event:{
+                              click:[
+                                   {
+                                        name: "api",
+                                        params:{
+                                             url:"theme/save",
+                                             config:{
+                                                  name: {
+                                                       result: "body",
+                                                       type:2,
+                                                       id:4,
+                                                       name: 'name_theme'
+                                                  },
+                                                  description: {
+                                                       result: "body",
+                                                       type:2,
+                                                       id:4,
+                                                       name: 'description_theme'
+                                                  }
+                                             }
+                                        }
+                                   }
+                              ]
+                         }
                     }
                ]
           }

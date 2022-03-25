@@ -2,7 +2,8 @@ import {ConfigCallback} from "../../interface/config/configCallback";
 import {callbackApi} from "./api";
 import {CallbackDeleteTableRow} from "./delete_table_row";
 
-export async function Callback(configCallback:ConfigCallback[], content:any){
+export async function Callback(event:any, configCallback:ConfigCallback[], content:any){
+    event.preventDefault();
     if (!configCallback){
         return;
     }
