@@ -7,5 +7,6 @@ export interface ConfigCallback{
 }
 
 export enum CallbackName{
-    api="api"
+    api="api",
+    delete_table_row="delete_table_row",
 }

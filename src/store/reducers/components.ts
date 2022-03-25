@@ -2,6 +2,8 @@ import {ComponentsAction, ComponentsReducers, ComponentsState, ComponentsTypes} 
 
 export const ComponentsReducer = (state = ComponentsState, action: ComponentsAction): ComponentsReducers => {
     switch (action.type) {
+        case ComponentsTypes.CREATE_COMPONENTS:
+            return { ...state, components:action.payload.components}
         case ComponentsTypes.CREATE_COMPONENT:
             return { ...state, components: {...state.components,[action.payload.id]:action.payload.components } }
         case ComponentsTypes.RESET_COMPONENT:
