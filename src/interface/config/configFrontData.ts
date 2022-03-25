@@ -7,6 +7,7 @@ export interface FrontData{
     id: number,
     name: string;
     result:ResultFrontData;
+    index: number;
 }
 export enum ResultFrontData{
     body="body",

@@ -61,6 +61,20 @@ export const id_4 = {
                                                   }
                                              }
                                         }
+                                   },
+                                   {
+                                        name: "api",
+                                        params:{
+                                             url:"theme/get_id",
+                                             config: {
+                                                  id: {
+                                                       result: "params",
+                                                       type:1,
+                                                       index: 0,
+                                                       name: 'id'
+                                                  },
+                                             }
+                                        }
                                    }
                               ]
                          }

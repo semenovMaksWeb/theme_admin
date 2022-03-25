@@ -10,7 +10,6 @@ export function Button(props:any){
     }else {
         button = props.elem;
     }
-
     if (!button){
         return  (<><div>кнопка не иницилизирована!</div> </>)
     }
