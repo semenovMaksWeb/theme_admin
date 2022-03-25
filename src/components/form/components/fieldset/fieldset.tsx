@@ -2,7 +2,6 @@ import React from "react";
 import {FormSlot} from "../../form_slot";
 
 export function Fieldset(props:any){
-    console.log(props.elem)
     const { elem } = FormSlot({elem: props.elem.children, id_form:props.id_form})
     return(
         <fieldset className="form__fieldset">

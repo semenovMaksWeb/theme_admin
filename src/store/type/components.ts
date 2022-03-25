@@ -1,8 +1,11 @@
+import {UpdateValuesForm} from "./form";
+
 export enum ComponentsTypes {
     CREATE_COMPONENT="CREATE_COMPONENT",
     CREATE_COMPONENTS="CREATE_COMPONENTS",
     RESET_COMPONENT="RESET_COMPONENT",
-    CREATE_DATA_COMPONENT="CREATE_DATA"
+    CREATE_DATA_COMPONENT="CREATE_DATA",
+    UPDATE_VALUES_FORM="UPDATE_VALUES_FORM",
 }
 
 export interface CreateDataComponents{
@@ -31,7 +34,7 @@ export interface CreateComponents{
 }
 
 
-export type ComponentsAction = CreateComponent | ResetComponents | CreateDataComponents | CreateComponents;
+export type ComponentsAction = CreateComponent | ResetComponents | CreateDataComponents | CreateComponents | UpdateValuesForm;
 
 export interface ComponentsReducers {
     components: any

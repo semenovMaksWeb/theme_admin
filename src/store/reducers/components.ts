@@ -19,6 +19,20 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        case ComponentsTypes.UPDATE_VALUES_FORM:
+            return  {
+                ...state,
+                components: {
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        values:{
+                            ...state.components[action.payload.id].values,
+                            [action.payload.key]: action.payload.value,
+                        }
+                    }
+                }
+            }
         default:
             return state
     }
