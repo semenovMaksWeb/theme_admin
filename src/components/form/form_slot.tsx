@@ -8,19 +8,19 @@ export function FormSlot(props:any, check_wrapper= false){
     const elem:any  = [];
     for (const e of props.elem) {
         if (e.type === "fieldset"){
-            elem.push(<Fieldset key={e.id} elem={e}/>);
+            elem.push(<Fieldset key={e.id} elem={e} id_form={props.id_form} />);
             continue;
         }
         if (e.type === "button"){
-            elem.push(<Button key={e.id} elem={e}/>);
+            elem.push(<Button key={e.id} elem={e} id_form={props.id_form} />);
             continue;
         }
         if (!check_wrapper){
-            elem.push(<Wrapper key={e.order} elem={e}/>);
+            elem.push(<Wrapper key={e.order} elem={e} id_form={props.id_form} />);
             continue;
         }
         if (e.type === "input"){
-            elem.push(<Input key={e.id} elem={e}/>);
+            elem.push(<Input key={e.id} elem={e} id_form={props.id_form} />);
             continue;
         }
 
