@@ -81,6 +81,19 @@ export const id_4 = {
                                                   },
                                              }
                                         }
+                                   },
+                                   {
+                                        name: "add_table_row",
+                                        params: {
+                                             config: {
+                                                  data:{
+                                                       result: "all",
+                                                       type: 1,
+                                                       index: 2,
+                                                  }
+                                             },
+                                             id: 1,
+                                        }
                                    }
                               ]
                          }
