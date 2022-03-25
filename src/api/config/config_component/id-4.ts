@@ -63,6 +63,12 @@ export const id_4 = {
                                         }
                                    },
                                    {
+                                        name: "reset_values_form",
+                                        params: {
+                                             id: 4
+                                        }
+                                   },
+                                   {
                                         name: "api",
                                         params:{
                                              url:"theme/get_id",

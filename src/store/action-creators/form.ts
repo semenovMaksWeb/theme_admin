@@ -11,6 +11,5 @@ export function UpdateValuesForm(id:number, key:string, value:any){
                 value: value,
             }
         })
-
     }
 }
