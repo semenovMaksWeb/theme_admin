@@ -10,8 +10,6 @@ export function Container(props:any){
         children[e.id] = components[e.id];
     });
     const {screen} =  slot(children, true);
-    console.log(children)
-    console.log(screen);
     return(
         <div className="container">
             {screen}
