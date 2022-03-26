@@ -33,6 +33,18 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        case  ComponentsTypes.CREATE_CHECKBOX_COMPONENT:
+            return {
+                ...state,
+                components: {
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                         checkbox_data: action.payload.data
+                    }
+                }
+            }
+
         case ComponentsTypes.RESET_VALUES_FORM:
             return  {
                 ...state,
