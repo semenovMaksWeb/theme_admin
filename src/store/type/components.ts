@@ -1,4 +1,4 @@
-import {UpdateValuesForm} from "./form";
+import {ResetValuesForm, UpdateValuesForm} from "./form";
 
 export enum ComponentsTypes {
     CREATE_COMPONENT="CREATE_COMPONENT",
@@ -6,6 +6,7 @@ export enum ComponentsTypes {
     RESET_COMPONENT="RESET_COMPONENT",
     CREATE_DATA_COMPONENT="CREATE_DATA",
     UPDATE_VALUES_FORM="UPDATE_VALUES_FORM",
+    RESET_VALUES_FORM="RESET_VALUES_FORM",
 }
 
 export interface CreateDataComponents{
@@ -34,7 +35,7 @@ export interface CreateComponents{
 }
 
 
-export type ComponentsAction = CreateComponent | ResetComponents | CreateDataComponents | CreateComponents | UpdateValuesForm;
+export type ComponentsAction = CreateComponent | ResetComponents | CreateDataComponents | CreateComponents | UpdateValuesForm | ResetValuesForm;
 
 export interface ComponentsReducers {
     components: any

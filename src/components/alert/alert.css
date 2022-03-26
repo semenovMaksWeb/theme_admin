@@ -1,0 +1,24 @@
+.alert{
+    position: relative;
+    font-size: 18px;
+    border: 1px solid;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.alert:last-child{
+    margin-bottom: 0;
+}
+.alert.success{
+    border-color: #0f9d0f;
+    background: #27e427;
+    color: #255e31;
+}
+
+.alert_close{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 11px;
+    cursor: pointer;
+}

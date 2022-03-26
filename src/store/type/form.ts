@@ -8,3 +8,10 @@ export interface UpdateValuesForm{
         value:any,
     }
 }
+export interface ResetValuesForm{
+    type: ComponentsTypes.RESET_VALUES_FORM,
+    payload:{
+        id: number,
+        values:any,
+    }
+}

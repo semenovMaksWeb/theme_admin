@@ -33,6 +33,17 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        case ComponentsTypes.RESET_VALUES_FORM:
+            return  {
+                ...state,
+                components: {
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        values: action.payload.values,
+                    }
+                }
+            }
         default:
             return state
     }

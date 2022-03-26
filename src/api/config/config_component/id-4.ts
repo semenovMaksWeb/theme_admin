@@ -39,7 +39,64 @@ export const id_4 = {
                          order: 3,
                          key: "button_save",
                          type: "button",
-                         text: "сохранить"
+                         text: "сохранить",
+                         event:{
+                              click:[
+                                   {
+                                        name: "api",
+                                        params:{
+                                             url:"theme/save",
+                                             config:{
+                                                  name: {
+                                                       result: "body",
+                                                       type:2,
+                                                       id:4,
+                                                       name: 'name_theme'
+                                                  },
+                                                  description: {
+                                                       result: "body",
+                                                       type:2,
+                                                       id:4,
+                                                       name: 'description_theme'
+                                                  }
+                                             }
+                                        }
+                                   },
+                                   {
+                                        name: "reset_values_form",
+                                        params: {
+                                             id: 4
+                                        }
+                                   },
+                                   {
+                                        name: "api",
+                                        params:{
+                                             url:"theme/get_id",
+                                             config: {
+                                                  id: {
+                                                       result: "params",
+                                                       type:1,
+                                                       index: 0,
+                                                       name: 'id'
+                                                  },
+                                             }
+                                        }
+                                   },
+                                   {
+                                        name: "add_table_row",
+                                        params: {
+                                             config: {
+                                                  data:{
+                                                       result: "all",
+                                                       type: 1,
+                                                       index: 2,
+                                                  }
+                                             },
+                                             id: 1,
+                                        }
+                                   }
+                              ]
+                         }
                     }
                ]
           }

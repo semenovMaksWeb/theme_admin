@@ -1,5 +1,5 @@
 import React from "react";
-import {TypeComponents} from "../../interface/typeComponents";
+import {TypeComponents} from "../../interface/type/typeComponents";
 import {Table} from "../table/table";
 import {Button} from "../button/button";
 import {Container} from "../container/container";
