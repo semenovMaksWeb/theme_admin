@@ -1,3 +1,8 @@
+:root{
+    --component-order: 0;
+    --component-margin: 0;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -5,4 +10,8 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.components{
+    margin: var(--component-margin);
+    order: var(--component-order);
 }

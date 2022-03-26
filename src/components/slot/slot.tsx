@@ -12,13 +12,13 @@ export function slot(configScreen:any, check_screen_visible = false){
             continue;
         }
         if (elem.type === TypeComponents.table){
-            screen.push(<Table key={elem.id} id={elem.id}/>)
+            screen.push(<Table key={elem.id} id={elem.id} />)
         }else
         if (elem.type === TypeComponents.button){
-            screen.push(<Button key={elem.id} id={elem.id}/>)
+            screen.push(<Button key={elem.id} id={elem.id} />)
         }
         if (elem.type ===TypeComponents.container){
-            screen.push(<Container key={elem.id} id={elem.id}/>)
+            screen.push(<Container key={elem.id} id={elem.id} />)
         }
         if (elem.type ===TypeComponents.form){
             screen.push(<Form key={elem.id} id={elem.id}/>)

@@ -3,6 +3,7 @@ import "./styles/table.css"
 import {useTypeSelector} from "../../hook/use-typed-selector";
 import {CreateContent} from "./lib/create-dom/create-content";
 import {useActions} from "../../hook/use-actions";
+import {componentsStyle} from "../../servers/css/components_style";
 
 export function Table(props:any){
     const  {CreateCheckboxData, DataSaveTable}= useActions();
@@ -23,9 +24,10 @@ export function Table(props:any){
     if (!table){
         return  (<><div>Таблица не иницилизирована!</div> </>)
     }
+    const {components_style} = componentsStyle(table);
     return(
         <>
-            <div className="table" data-id={table.id}>
+            <div className="table components" data-id={table.id} style={components_style}>
                 <div className="table__header">
                     {header}
                 </div>
