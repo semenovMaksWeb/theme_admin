@@ -1,8 +1,8 @@
  export const id_1 = {
     id: 1,
-    order: 1,
-    margin: "0px 0px 10px 0px",
     style:{
+        order: 1,
+        margin: "0px 0px 10px 0px",
         hidden_text_overflow: true,
     },
     checkbox_data:[],
