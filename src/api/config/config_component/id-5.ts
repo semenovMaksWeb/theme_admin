@@ -1,5 +1,6 @@
  export const id_5 = {
      id:5,
+     order: 2,
      screen_visible:false,
      type: "button",
      text: "удалить",

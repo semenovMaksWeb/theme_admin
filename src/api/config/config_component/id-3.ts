@@ -3,8 +3,8 @@
      type: "container",
      screen_visible:true,
      children:[
-         { id: 1, order: 1 },
-          { id: 5, order: 2 },
-          { id: 4, order: 3 },
+         { id: 1 },
+         { id: 5 },
+         { id: 4 },
      ]
 }

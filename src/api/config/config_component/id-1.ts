@@ -1,5 +1,6 @@
  export const id_1 = {
     id: 1,
+    order: 1,
     style:{
         hidden_text_overflow: true,
     },
