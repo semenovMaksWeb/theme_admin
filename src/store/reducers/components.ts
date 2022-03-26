@@ -44,8 +44,6 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
-
-
         default:
             return state
     }

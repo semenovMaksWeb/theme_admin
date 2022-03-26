@@ -1,5 +1,5 @@
 import React from "react";
-import {typeSchemaTable} from "../../../../interface/typeSchemaTable";
+import {typeSchemaTable} from "../../../../interface/type/typeSchemaTable";
 import {Button} from "../../../button/button";
 import {GeneratorCss} from "../../../../servers/css/generator_css";
 

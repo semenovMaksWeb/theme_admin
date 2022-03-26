@@ -10,6 +10,7 @@ export function Page_404(){
         DataSaveTable(1);
     }, []);
     const  components = useTypeSelector(state => state.components.components);
+    const  state = useTypeSelector(state => state);
     const {screen} = slot(components);
     if (components[1]?.data){
         return(
