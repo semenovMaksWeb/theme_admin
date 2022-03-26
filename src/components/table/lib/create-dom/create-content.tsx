@@ -26,6 +26,9 @@ export function createContent(table:any){
     const classTd = `table__td table_elem ${className}`
     const classTr = `table__tr`
     //header генерация
+    if (table.checkbox_td){
+        header.push(<div key='checkbox_th' className={classTh}></div>);
+    }
     for (const key in table.schema) {
         const elem = table.schema[key];
         const  style = style_all_result(elem);
@@ -35,8 +38,14 @@ export function createContent(table:any){
     }
 
     //body генерация
+    const checkbox = [];
     for (const dataset of table.data){
         const row = [];
+        if (table.checkbox_td){
+            const key_checkbox = dataset[table.key_main];
+            checkbox.push({key: dataset[table.key_main], value:false });
+            row.push(<div key={key_checkbox} className="table__td table_elem"><input type="checkbox"/></div>);
+        }
 
         for (const key in table.schema) {
             const elem = table.schema[key];
@@ -52,6 +61,7 @@ export function createContent(table:any){
         }
         body.push(<div key={dataset[table.key_main]} className={classTr}>{row}</div>);
     }
+    console.log(checkbox)
     return {
         header, body
     }
