@@ -1,9 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {typeSchemaTable} from "../../../../interface/type/typeSchemaTable";
 import {Button} from "../../../button/button";
 import {GeneratorCss} from "../../../../servers/css/generator_css";
 import { CreateCheckboxTd } from "./create_checkbox_td";
-import {useActions} from "../../../../hook/use-actions";
 import {TableCheckboxData} from "../../../../interface/tableCheckboxData";
 
 /**
@@ -22,7 +21,10 @@ function style_all_result(elem:any){
  * функция возвращает body, header таблицы
  */
 export function CreateContent(table:any){
-    const  {CreateCheckboxData}= useActions();
+    console.log(table)
+    if (!table.data){
+        return {body: [], checkbox: [], header: []};
+    }
     const body:any = [];
     const header:any = [];
     const { className } = GeneratorCss(table.style);
@@ -52,7 +54,6 @@ export function CreateContent(table:any){
             checkbox.push(checkbox_value);
             row.push(row_checkbox);
         }
-
         for (const key in table.schema) {
             const elem = table.schema[key];
             const style = style_all_result(elem);
@@ -67,13 +68,7 @@ export function CreateContent(table:any){
         }
         body.push(<div key={dataset[table.key_main]} className={classTr}>{row}</div>);
     }
-    useEffect(()=>{
-        if (checkbox.length > 0){
-            CreateCheckboxData(table.id, checkbox);
-        }
-    }, [])
-
     return {
-        header, body
+        header, body, checkbox
     }
 }
