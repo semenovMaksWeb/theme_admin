@@ -2,12 +2,16 @@ import {ComponentsAction, ComponentsReducers, ComponentsState, ComponentsTypes} 
 
 export const ComponentsReducer = (state = ComponentsState, action: ComponentsAction): ComponentsReducers => {
     switch (action.type) {
+        // добавить скрин компонентов
         case ComponentsTypes.CREATE_COMPONENTS:
             return { ...state, components:action.payload.components}
+        // добавить компонент
         case ComponentsTypes.CREATE_COMPONENT:
             return { ...state, components: {...state.components,[action.payload.id]:action.payload.components } }
+        // сбросить компоненты
         case ComponentsTypes.RESET_COMPONENT:
             return { components: {} }
+        // заполнить данные
         case  ComponentsTypes.CREATE_DATA_COMPONENT:
             return  {
                 ...state,
@@ -19,6 +23,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        // изменить данные в форме
         case ComponentsTypes.UPDATE_VALUES_FORM:
             return  {
                 ...state,
@@ -33,6 +38,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        // заполнить данные checkbox
         case  ComponentsTypes.CREATE_CHECKBOX_COMPONENT:
             return {
                 ...state,
@@ -44,7 +50,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
-
+        // сбросить данные в форме
         case ComponentsTypes.RESET_VALUES_FORM:
             return  {
                 ...state,
@@ -56,7 +62,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
-        default:
-            return state
+            default:
+                return state
     }
 }

@@ -18,7 +18,7 @@ export function DataSaveTable(id:number){
     }
 }
 export function CreateCheckboxData(id:number, data:TableCheckboxData[]){
-    return async (dispatch: Dispatch<TableAction>, getStore:any) => {
+    return async (dispatch: Dispatch<TableAction>) => {
         dispatch({
             type: ComponentsTypes.CREATE_CHECKBOX_COMPONENT,
             payload:  {id: id, data:  data}

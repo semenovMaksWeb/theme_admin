@@ -15,5 +15,11 @@ export interface CreateCheckboxData{
         data:TableCheckboxData[],
     },
 }
-
-export type TableAction = DataSaveTable | CreateCheckboxData;
+export interface DeleteCheckboxTable{
+    type: ComponentsTypes.DELETE_CHECKBOX_COMPONENT,
+    payload: {
+        id:number,
+        index:number
+    }
+}
+export type TableAction = DataSaveTable | CreateCheckboxData | DeleteCheckboxTable;

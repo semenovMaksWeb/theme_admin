@@ -1,5 +1,5 @@
 import {ResetValuesForm, UpdateValuesForm} from "./form";
-import {CreateCheckboxData} from "./table";
+import {CreateCheckboxData, DeleteCheckboxTable} from "./table";
 
 export enum ComponentsTypes {
     CREATE_COMPONENT="CREATE_COMPONENT",
@@ -9,6 +9,7 @@ export enum ComponentsTypes {
     UPDATE_VALUES_FORM="UPDATE_VALUES_FORM",
     RESET_VALUES_FORM="RESET_VALUES_FORM",
     CREATE_CHECKBOX_COMPONENT="CREATE_CHECKBOX_COMPONENT",
+    DELETE_CHECKBOX_COMPONENT="DELETE_CHECKBOX_COMPONENT"
 }
 
 export interface CreateDataComponents{
@@ -37,7 +38,7 @@ export interface CreateComponents{
 }
 
 
-export type ComponentsAction = CreateComponent | CreateCheckboxData | ResetComponents | CreateDataComponents | CreateComponents | UpdateValuesForm | ResetValuesForm;
+export type ComponentsAction = DeleteCheckboxTable | CreateComponent | CreateCheckboxData | ResetComponents | CreateDataComponents | CreateComponents | UpdateValuesForm | ResetValuesForm;
 
 export interface ComponentsReducers {
     components: any

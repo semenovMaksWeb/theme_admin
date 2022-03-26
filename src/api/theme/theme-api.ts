@@ -14,6 +14,6 @@ export async function ThemeApiDeleteId(params:{id:number}){
 export async function ThemeApiSave(params: any, body:{name:string, description:string}){
     return baseApi(await axios.post(`${apiUrl}/theme/save`, {...body} ));
 }
-export async function ThemeApiDeleteIn(params: any, body:number[]){
+export async function ThemeApiDeleteIn(params: any, body:{id:number[]}){
     return baseApi(await axios.delete(`${apiUrl}/theme/delete_in`, {data: body} ));
 }
