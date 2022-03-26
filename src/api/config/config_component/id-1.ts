@@ -3,6 +3,8 @@
     style:{
         hidden_text_overflow: true,
     },
+    checkbox_data:[],
+    checkbox_td: true,
     screen_visible:false,
     type: "table",
     key_main: 'id',

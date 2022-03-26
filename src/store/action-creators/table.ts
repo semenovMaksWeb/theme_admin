@@ -4,6 +4,7 @@ import {TableAction} from "../type/table";
 
 import {indexApi} from "../../api/index-api";
 import {ComponentsTypes} from "../type/components";
+import {TableCheckboxData} from "../../interface/tableCheckboxData";
 
 
 export function DataSaveTable(id:number){
@@ -14,5 +15,14 @@ export function DataSaveTable(id:number){
             type: ComponentsTypes.CREATE_DATA_COMPONENT,
             payload:  {id: id, data:  response.data}
         })
+    }
+}
+export function CreateCheckboxData(id:number, data:TableCheckboxData[]){
+    return async (dispatch: Dispatch<TableAction>) => {
+        dispatch({
+            type: ComponentsTypes.CREATE_CHECKBOX_COMPONENT,
+            payload:  {id: id, data:  data}
+        })
+
     }
 }

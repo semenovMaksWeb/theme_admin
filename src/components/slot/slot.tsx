@@ -23,9 +23,6 @@ export function slot(configScreen:any, check_screen_visible = false){
         if (elem.type ===TypeComponents.form){
             screen.push(<Form key={elem.id} id={elem.id}/>)
         }
-        if (elem.children){
-            console.log("тут логика если есть потомки")
-        }
     }
     return {screen};
 }
