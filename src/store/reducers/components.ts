@@ -51,7 +51,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                 }
             }
         // сбросить данные в форме
-        case ComponentsTypes.RESET_VALUES_FORM:
+        case ComponentsTypes.SAVE_VALUES_FORM:
             return  {
                 ...state,
                 components: {
