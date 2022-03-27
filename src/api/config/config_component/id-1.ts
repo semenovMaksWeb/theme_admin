@@ -37,6 +37,13 @@
             title: "удалить",
             type: "button",
             button:2,
+        },
+        update:{
+            w:120,
+            key: "update",
+            title: "изменить",
+            type: "button",
+            button:7,
         }
     }
 }
