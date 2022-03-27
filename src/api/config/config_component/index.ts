@@ -3,10 +3,12 @@ import {id_2} from "./id-2";
 import {id_3} from "./id-3";
 import {id_4} from "./id-4";
 import {id_5} from "./id-5";
+import {id_6} from "./id-6";
 export const config_component:any = {
     1: id_1,
     2: id_2,
     3: id_3,
     4: id_4,
     5: id_5,
+    6: id_6,
 }

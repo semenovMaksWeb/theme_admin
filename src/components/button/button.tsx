@@ -2,6 +2,7 @@ import React from "react";
 import {useTypeSelector} from "../../hook/use-typed-selector";
 
 import {Callback} from "../../servers/callback";
+import {componentsStyle} from "../../servers/css/components_style";
 export function Button(props:any){
     const  components = useTypeSelector(state => state.components.components);
     let button:any;
@@ -16,9 +17,18 @@ export function Button(props:any){
     const clickButton = async (event:any)=>{
         await Callback(event,button?.event?.click, props.context);
     }
+    const {components_style} = componentsStyle(button);
     return(
         <>
-            <button onClick={clickButton} data-id={button.id} title={button.title}>{button.text}</button>
+            <button
+                className="button components"
+                onClick={clickButton}
+                data-id={button.id}
+                title={button.title}
+                style={components_style}
+            >
+                {button.text}
+            </button>
         </>
     )
 }

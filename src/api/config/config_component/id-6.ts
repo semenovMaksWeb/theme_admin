@@ -1,10 +1,10 @@
-export const id_4 = {
-     id:4,
+export const id_6 = {
+     id:6,
      style:{
-       order: 3,
+       order: 5,
      },
      type: "form",
-     screen_visible:false,
+     screen_visible:true,
      name: "",
      values:{
           name_theme: "",
@@ -16,7 +16,7 @@ export const id_4 = {
                type: "fieldset",
                id:"main_fieldset",
                legend:{
-                    text: "Создать тему",
+                    text: "Изменить тему",
                },
                children:[
                     {
@@ -38,7 +38,7 @@ export const id_4 = {
                          }
                     },
                     {
-                         id: 'save',
+                         id: 'update',
                          order: 3,
                          key: "button_save",
                          type: "button",

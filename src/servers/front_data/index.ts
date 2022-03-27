@@ -2,6 +2,7 @@ import {ConfigFrontData, FrontData} from "../../interface/config/configFrontData
 import {fd_1} from "./fd_1";
 import {fd_2} from "./fd_2";
 import {fd_3} from "./fd_3";
+import {fd_4} from "./fd_4";
 
 export function frontData(configFrontData:ConfigFrontData, content:any){
     const params:any = {};
@@ -17,6 +18,9 @@ export function frontData(configFrontData:ConfigFrontData, content:any){
         }
         if (config.type === 3){
             checkSave(config, key, fd_3(config));
+        }
+        if (config.type === 4){
+            checkSave(config, key, fd_4(config));
         }
     }
 

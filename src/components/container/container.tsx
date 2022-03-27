@@ -1,6 +1,7 @@
 import React from "react";
 import {useTypeSelector} from "../../hook/use-typed-selector";
 import {slot} from "../slot/slot";
+import "./container.css"
 
 export function Container(props:any){
     const  components = useTypeSelector(state => state.components.components);
@@ -10,9 +11,9 @@ export function Container(props:any){
         children[e.id] = components[e.id];
     }
     const {screen} =  slot(children, true);
-    console.log(screen)
+
     return(
-        <div className="container">
+        <div className="container container__default components">
             {screen}
         </div>
     )
