@@ -6,7 +6,7 @@
      screen_visible:false,
      type: "button",
      text: "удалить",
-     title: "удалить тему",
+     title: "удалить выбранные темы",
       event:{
           click:[
                {
