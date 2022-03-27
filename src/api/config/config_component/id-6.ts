@@ -65,6 +65,10 @@ export const id_6 = {
                          key: "button_save",
                          type: "button",
                          text: "сохранить",
+                         style:{
+                              border: "1px solid #000",
+                              border_radius: "4px",
+                         },
                          event:{
                               click:[
                                    {

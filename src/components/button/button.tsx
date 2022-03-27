@@ -1,7 +1,7 @@
 import React from "react";
 import {useTypeSelector} from "../../hook/use-typed-selector";
 import { useHistory } from 'react-router-dom'
-
+import "./button.css"
 import {Callback} from "../../servers/callback";
 import {componentsStyle} from "../../servers/css/components_style";
 export function Button(props:any){

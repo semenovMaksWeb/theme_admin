@@ -39,6 +39,10 @@ export const id_4 = {
                     },
                     {
                          id: 'save',
+                         style:{
+                              border: "1px solid #000",
+                              border_radius: "4px",
+                         },
                          order: 3,
                          key: "button_save",
                          type: "button",

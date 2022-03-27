@@ -4,7 +4,8 @@
         color: "red",
          bg: "transparent",
          border: "1px solid red",
-         border_radius: "4px"
+         border_radius: "4px",
+         margin: "0 auto",
      },
      screen_visible:false,
      type: "button",

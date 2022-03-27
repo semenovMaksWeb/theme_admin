@@ -2,6 +2,10 @@
      id:5,
      style:{
          order: 2,
+             color: "red",
+             bg: "transparent",
+             border: "1px solid red",
+             border_radius: "4px",
      },
      screen_visible:false,
      type: "button",
