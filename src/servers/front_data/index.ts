@@ -3,6 +3,7 @@ import {fd_1} from "./fd_1";
 import {fd_2} from "./fd_2";
 import {fd_3} from "./fd_3";
 import {fd_4} from "./fd_4";
+import {validateData} from "./validate_data";
 
 export function frontData(configFrontData:ConfigFrontData, content:any){
     const params:any = {};
@@ -25,6 +26,9 @@ export function frontData(configFrontData:ConfigFrontData, content:any){
     }
 
     function checkSave(config:FrontData, key:string, data:any){
+        if (config.var_type){
+            data = validateData(config, data);
+        }
         if (config.result === 'params'){
             params[key] = data;
         }

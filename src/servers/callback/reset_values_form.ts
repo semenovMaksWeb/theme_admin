@@ -7,5 +7,5 @@ export function reset_values_form(id:number){
     for (const key in form) {
         res[key] = "";
     }
-    store.dispatch({type: ComponentsTypes.RESET_VALUES_FORM, payload:{ id: id, values: res }});
+    store.dispatch({type: ComponentsTypes.SAVE_VALUES_FORM, payload:{ id: id, values: res }});
 }
