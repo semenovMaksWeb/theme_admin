@@ -4,10 +4,10 @@ export interface ConfigFrontData{
 
 export interface FrontData{
     type: number,
-    id: number,
+    id?: number,
     name: string;
     result:ResultFrontData;
-    index: number;
+    index?: number;
 }
 export enum ResultFrontData{
     body="body",
