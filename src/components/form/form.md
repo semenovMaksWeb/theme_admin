@@ -4,7 +4,10 @@
 `order` порядок в верстке
 `name: название формы (заголовок)`
 `screen_visible - нужно ли рисоваться в скрине верхнем уровне`
-
+`api_data` - Объект имеющий ключи: url, config front_data и schema_value
+    `schema_value схема подстановки данных в форму от бэка
+        состоит из key_api и key_values
+    ` 
 schema - выводит компоненты внутри form
    order - порядок компонента
    type - тип компонента fieldset, legend,wrapper,input

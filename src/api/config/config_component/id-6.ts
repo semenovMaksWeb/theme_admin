@@ -3,6 +3,28 @@ export const id_6 = {
      style:{
        order: 5,
      },
+     api_data: {
+          url:"theme/get_id",
+          config:{
+               id: {
+                    result: "params",
+                    type:4,
+                    name: 'id_theme',
+                    var_type: 'number',
+               },
+          },
+          schema_value:[
+              {
+                   key_api: "name",
+                   key_values: "name_theme",
+              },
+              {
+                    key_api: "description",
+                    key_values: "description_theme",
+              }
+
+          ]
+     },
      type: "form",
      screen_visible:true,
      name: "",
