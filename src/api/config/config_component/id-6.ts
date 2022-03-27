@@ -70,56 +70,29 @@ export const id_6 = {
                                    {
                                         name: "api",
                                         params:{
-                                             url:"theme/save",
+                                             url:"theme/update_all",
                                              config:{
                                                   name: {
                                                        result: "body",
                                                        type:2,
-                                                       id:4,
+                                                       id:6,
                                                        name: 'name_theme'
                                                   },
                                                   description: {
                                                        result: "body",
                                                        type:2,
-                                                       id:4,
+                                                       id:6,
                                                        name: 'description_theme'
-                                                  }
-                                             }
-                                        }
-                                   },
-                                   {
-                                        name: "reset_values_form",
-                                        params: {
-                                             id: 4
-                                        }
-                                   },
-                                   {
-                                        name: "api",
-                                        params:{
-                                             url:"theme/get_id",
-                                             config: {
+                                                  },
                                                   id: {
                                                        result: "params",
-                                                       type:1,
-                                                       index: 0,
-                                                       name: 'id'
-                                                  },
+                                                       type:4,
+                                                       name: 'id_theme',
+                                                       var_type: 'number',
+                                                  }
                                              }
                                         }
                                    },
-                                   {
-                                        name: "add_table_row",
-                                        params: {
-                                             config: {
-                                                  data:{
-                                                       result: "all",
-                                                       type: 1,
-                                                       index: 2,
-                                                  }
-                                             },
-                                             id: 1,
-                                        }
-                                   }
                               ]
                          }
                     }
