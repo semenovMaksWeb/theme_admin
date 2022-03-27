@@ -17,3 +17,6 @@ export async function ThemeApiSave(params: any, body:{name:string, description:s
 export async function ThemeApiDeleteIn(params: any, body:{id:number[]}){
     return baseApi(await axios.delete(`${apiUrl}/theme/delete_in`, {data: body} ));
 }
+export async function ThemeApiUpdateId(params:{id:number}, body: { name:string, description:string }){
+    return baseApi(await axios.put(`${apiUrl}/theme/update_all`, { ...body }, {params: { ...params } } ) );
+}
