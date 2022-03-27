@@ -3,8 +3,9 @@ import {callbackApi} from "./api";
 import {CallbackDeleteTableRow} from "./delete_table_row";
 import {reset_values_form} from "./reset_values_form";
 import {add_table_row} from "./add_table_row";
+import {router_push} from "./router_push";
 
-export async function Callback(event:any, configCallback:ConfigCallback[], content:any={}){
+export async function Callback(event:any, configCallback:ConfigCallback[], content:any={}, history?:any){
     event.preventDefault();
     if (!configCallback){
         return;
@@ -24,6 +25,9 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
         }
         if (config.name === CallbackName.add_table_row) {
             add_table_row(config, content);
+        }
+        if (config.name === CallbackName.router_push) {
+            router_push(config, content, history);
         }
     }
 }

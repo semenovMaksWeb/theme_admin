@@ -10,7 +10,7 @@ export function Page_screen(){
     const params:any = useParams();
     useEffect(()=>{
         CreateScreen(+params.id);
-    }, []);
+    }, [params.id]);
     const  components = useTypeSelector(state => state.components.components);
     const {screen} = slot(components);
     return(
