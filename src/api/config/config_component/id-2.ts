@@ -1,5 +1,11 @@
  export const id_2 = {
      id:2,
+     style:{
+        color: "red",
+         bg: "transparent",
+         border: "1px solid red",
+         border_radius: "4px"
+     },
      screen_visible:false,
      type: "button",
      text: "удалить",
