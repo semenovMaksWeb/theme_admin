@@ -16,7 +16,7 @@ export function Form(props:any){
             if (form && form.api_data){
                 const {body, params} = frontData(form.api_data.config, {});
                 const res = await generatorUrlApi(form.api_data.url, params, body);
-                if (res?.data){
+                if (res?.data && res.status === 200){
                     ConvertSchemaValue(form.id, res.data, form.api_data.schema_value);
                 }
             }

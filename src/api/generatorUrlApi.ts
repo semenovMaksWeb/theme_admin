@@ -1,8 +1,7 @@
 import axios from "axios";
-import {apiUrl} from "./index-api";
 import {baseApi} from "./baseApi";
 import {TypeApi, TypeApiMethods} from "../interface/type/typeApi";
-
+export const apiUrl = "https://localhost:7087";
 export  async function generatorUrlApi(config: TypeApi, params: any, body: any){
     let url:string = config.url;
     if (!config.domain){
@@ -22,3 +21,9 @@ export  async function generatorUrlApi(config: TypeApi, params: any, body: any){
     }
     return  null;
 }
+axios.interceptors.response.use(function (response) {
+    return response;
+}, (error)=>{
+    console.log(error.response )
+    return error.response;
+})
