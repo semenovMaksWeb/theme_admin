@@ -15,7 +15,9 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
         index++;
         if (config.name === CallbackName.api) {
             const res = await callbackApi(config, content);
-            content[index] = res.data;
+            if (res?.data){
+                content[index] = res.data;
+            }
         }
         if (config.name === CallbackName.delete_table_row) {
             CallbackDeleteTableRow(config, content);

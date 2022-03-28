@@ -1,10 +1,12 @@
+import {TypeApiMethods} from "../../../interface/type/typeApi";
+
 export const id_6 = {
      id:6,
      style:{
        order: 5,
      },
      api_data: {
-          url:"theme/get_id",
+          url:{ url: "theme/get_id", type: TypeApiMethods.get },
           config:{
                id: {
                     result: "params",
@@ -74,7 +76,7 @@ export const id_6 = {
                                    {
                                         name: "api",
                                         params:{
-                                             url:"theme/update_all",
+                                             url:{ url: "theme/update_all", type: TypeApiMethods.put},
                                              config:{
                                                   name: {
                                                        result: "body",

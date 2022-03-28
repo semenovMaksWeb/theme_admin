@@ -1,20 +1,22 @@
 import {Dispatch} from "redux";
 import {TableAction} from "../type/table";
-
-
-import {indexApi} from "../../api/index-api";
 import {ComponentsTypes} from "../type/components";
 import {TableCheckboxData} from "../../interface/tableCheckboxData";
+import {generatorUrlApi} from "../../api/generatorUrlApi";
+import {frontData} from "../../servers/front_data";
 
 
 export function DataSaveTable(id:number){
     return async (dispatch: Dispatch<TableAction>, getStore:any) => {
         const api_url = getStore().components.components[id].api_url;
-        const response = await indexApi[api_url]();
-        dispatch({
-            type: ComponentsTypes.CREATE_DATA_COMPONENT,
-            payload:  {id: id, data:  response.data}
-        })
+        const {body, params } = frontData(api_url.config, {});
+        const response = await generatorUrlApi(api_url, params, body);
+        if (response?.data){
+            dispatch({
+                type: ComponentsTypes.CREATE_DATA_COMPONENT,
+                payload:  {id: id, data:  response.data}
+            })
+        }
     }
 }
 export function CreateCheckboxData(id:number, data:TableCheckboxData[]){
