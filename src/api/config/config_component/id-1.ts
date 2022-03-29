@@ -1,4 +1,6 @@
- export const id_1 = {
+import {TypeApiMethods} from "../../../interface/type/typeApi";
+
+export const id_1 = {
     id: 1,
     style:{
         order: 1,
@@ -11,7 +13,7 @@
     type: "table",
     key_main: 'id',
     name: "Темы проектов",
-    api_url: "theme/get_all",
+    api_url:{ url: "theme/get_all", type: TypeApiMethods.get, config: {} },
     schema:{
         id:{
             w: 40,
@@ -37,6 +39,13 @@
             title: "удалить",
             type: "button",
             button:2,
+        },
+        update:{
+            w:120,
+            key: "update",
+            title: "изменить",
+            type: "button",
+            button:7,
         }
     }
 }

@@ -1,18 +1,24 @@
- export const id_5 = {
+import {TypeApiMethods} from "../../../interface/type/typeApi";
+
+export const id_5 = {
      id:5,
      style:{
          order: 2,
+             color: "red",
+             bg: "transparent",
+             border: "1px solid red",
+             border_radius: "4px",
      },
      screen_visible:false,
      type: "button",
      text: "удалить",
-     title: "удалить тему",
+     title: "удалить выбранные темы",
       event:{
           click:[
                {
                     name: "api",
                     params:{
-                         url:"theme/delete_in",
+                        url:{ url: "theme/delete_in", type: TypeApiMethods.delete },
                          config:{
                              id: {
                                  result: "body",

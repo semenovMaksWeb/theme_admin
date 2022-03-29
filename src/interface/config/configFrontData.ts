@@ -1,3 +1,5 @@
+import {ValType} from "../type/valType";
+
 export interface ConfigFrontData{
     [key:string]:FrontData
 }
@@ -8,6 +10,7 @@ export interface FrontData{
     name: string;
     result:ResultFrontData;
     index?: number;
+    var_type: ValType
 }
 export enum ResultFrontData{
     body="body",

@@ -1,5 +1,14 @@
- export const id_2 = {
+import {TypeApiMethods} from "../../../interface/type/typeApi";
+
+export const id_2 = {
      id:2,
+     style:{
+        color: "red",
+         bg: "transparent",
+         border: "1px solid red",
+         border_radius: "4px",
+         margin: "0 auto",
+     },
      screen_visible:false,
      type: "button",
      text: "удалить",
@@ -9,8 +18,8 @@
                {
                     name: "api",
                     params:{
-                         url:"theme/delete_id",
-                         config:{
+                        url:{ url: "theme/delete", type: TypeApiMethods.delete },
+                        config:{
                              id: {
                                  result: "params",
                                   type:1,

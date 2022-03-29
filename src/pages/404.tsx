@@ -1,19 +1,22 @@
 import React, {useEffect} from "react";
 import {useActions} from "../hook/use-actions";
-import {useTypeSelector} from "../hook/use-typed-selector";
-import {slot} from "../components/slot/slot";
+
+import {TypeApi, TypeApiMethods} from "../interface/type/typeApi";
+
+import {apiUrl, generatorUrlApi} from "../api/generatorUrlApi";
 
 export function Page_404(){
     const { CreateScreen} = useActions();
     useEffect(()=>{
-        CreateScreen(1);
+        const config:TypeApi = {
+            url: `${apiUrl}/theme/delete`,
+            type: TypeApiMethods.delete
+        }
+        generatorUrlApi(config, {}, {});
     }, []);
-    const  components = useTypeSelector(state => state.components.components);
-    const {screen} = slot(components);
         return(
             <>
                 <div>404</div>
-                {screen}
             </>
         )
     }

@@ -37,9 +37,16 @@ export function CreateContent(table:any){
     for (const key in table.schema) {
         const elem = table.schema[key];
         const  style = style_all_result(elem);
-        header.push(<div key={elem.key} className={classTh} style={style}>
-            {elem.title}
-        </div>);
+        header.push(
+            <div
+                title={elem.title}
+                key={elem.key}
+                className={classTh}
+                style={style}
+            >
+                {elem.title}
+            </div>
+        );
     }
 
     //body генерация
@@ -57,7 +64,14 @@ export function CreateContent(table:any){
             const elem = table.schema[key];
             const style = style_all_result(elem);
             if (elem.type === typeSchemaTable.td){
-                row.push(<div key={elem.key} className={classTd} style={style}>{dataset[key]}</div>);
+                row.push(
+                    <div title={dataset[key]}
+                         key={elem.key}
+                         className={classTd}
+                         style={style}
+                    >
+                        {dataset[key]}
+                    </div>);
             }
             if (elem.type === typeSchemaTable.button){
                 row.push(<div key={elem.key} className={classTd} style={style}>

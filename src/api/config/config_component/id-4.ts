@@ -1,3 +1,5 @@
+import {TypeApiMethods} from "../../../interface/type/typeApi";
+
 export const id_4 = {
      id:4,
      style:{
@@ -39,6 +41,10 @@ export const id_4 = {
                     },
                     {
                          id: 'save',
+                         style:{
+                              border: "1px solid #000",
+                              border_radius: "4px",
+                         },
                          order: 3,
                          key: "button_save",
                          type: "button",
@@ -48,7 +54,7 @@ export const id_4 = {
                                    {
                                         name: "api",
                                         params:{
-                                             url:"theme/save",
+                                             url:{ url: "theme/save", type: TypeApiMethods.post},
                                              config:{
                                                   name: {
                                                        result: "body",
@@ -74,7 +80,7 @@ export const id_4 = {
                                    {
                                         name: "api",
                                         params:{
-                                             url:"theme/get_id",
+                                             url:{ url: "theme/get_id", type: TypeApiMethods.get},
                                              config: {
                                                   id: {
                                                        result: "params",

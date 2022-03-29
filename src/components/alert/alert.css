@@ -2,7 +2,7 @@
     position: relative;
     font-size: 18px;
     border: 1px solid;
-    padding: 5px 15px;
+    padding: 5px 18px;
     margin-bottom: 5px;
     border-radius: 5px;
 }
@@ -13,6 +13,11 @@
     border-color: #0f9d0f;
     background: #27e427;
     color: #255e31;
+}
+.alert.errors{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }
 
 .alert_close{
