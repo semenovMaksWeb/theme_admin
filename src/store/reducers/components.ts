@@ -62,6 +62,18 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+            // изменить sort_rule
+        case ComponentsTypes.UPDATE_SORT_RULE:
+            return {
+                ...state,
+                components:{
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        sort_rule: action.payload.data
+                    }
+                }
+            }
             default:
                 return state
     }

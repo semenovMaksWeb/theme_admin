@@ -38,6 +38,13 @@
   right: 0;
   top: 0;
 }
+.th__sort.active{
+  display: block;
+}
+.th__sort_icons{
+  width: 12px;
+}
+
 .table__th:hover .th__sort{
   display: block;
 }

@@ -4,14 +4,14 @@ import {Button} from "../../../button/button";
 import {GeneratorCss} from "../../../../servers/css/generator_css";
 import { CreateCheckboxTd } from "./create_checkbox_td";
 import {TableCheckboxData} from "../../../../interface/tableCheckboxData";
-import {createTh} from "./create-th";
+import {createTh} from "./create-th/create-th";
 
 /**
  *
  * @param elem
  * функция возвращает стили указывающию ширину контента ячейки
  */
-function style_all_result(elem:any){
+export function style_all_result(elem:any){
     return {
         "--width__elem": `${elem.w}px`
     } as React.CSSProperties;
@@ -37,8 +37,7 @@ export function CreateContent(table:any){
     }
     for (const key in table.schema) {
         const elem = table.schema[key];
-        const  style = style_all_result(elem);
-        header.push(createTh(elem, classTh, style));
+        header.push(createTh(elem, classTh, table));
     }
 
     //body генерация
