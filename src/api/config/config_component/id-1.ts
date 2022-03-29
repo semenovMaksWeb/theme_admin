@@ -16,6 +16,7 @@ export const id_1 = {
     api_url:{ url: "theme/get_all", type: TypeApiMethods.get, config: {} },
     schema:{
         id:{
+            sort:true,
             w: 40,
             key: "id",
             title: "id",
@@ -26,12 +27,14 @@ export const id_1 = {
             key: "name",
             title: "название темы",
             type: "td",
+            sort:true,
         },
         description: {
             w: 120,
             key: "description",
             title: "описание темы",
             type: "td",
+            sort:true,
         },
         delete:{
             w:80,

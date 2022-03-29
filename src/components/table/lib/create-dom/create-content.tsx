@@ -4,6 +4,7 @@ import {Button} from "../../../button/button";
 import {GeneratorCss} from "../../../../servers/css/generator_css";
 import { CreateCheckboxTd } from "./create_checkbox_td";
 import {TableCheckboxData} from "../../../../interface/tableCheckboxData";
+import {createTh} from "./create-th";
 
 /**
  *
@@ -37,16 +38,7 @@ export function CreateContent(table:any){
     for (const key in table.schema) {
         const elem = table.schema[key];
         const  style = style_all_result(elem);
-        header.push(
-            <div
-                title={elem.title}
-                key={elem.key}
-                className={classTh}
-                style={style}
-            >
-                {elem.title}
-            </div>
-        );
+        header.push(createTh(elem, classTh, style));
     }
 
     //body генерация
