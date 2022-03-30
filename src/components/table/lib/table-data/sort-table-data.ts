@@ -10,7 +10,10 @@ export const sortLib = (a:any, b:any, elem:SortConfig) => {
     return 0;
 };
 
-export function sortDataTable(data:any, sort:SortConfig[]) {
+export function sortDataTable(data:any, sort?:SortConfig[]) {
+    if (!sort){
+        return;
+    }
     for (const elem of sort) {
         data.sort((a:any, b:any) => {
             if (elem.type === "asc") {

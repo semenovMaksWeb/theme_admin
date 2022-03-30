@@ -5,6 +5,7 @@ import {GeneratorCss} from "../../../../servers/css/generator_css";
 import { CreateCheckboxTd } from "./create_checkbox_td";
 import {TableCheckboxData} from "../../../../interface/tableCheckboxData";
 import {createTh} from "./create-th/create-th";
+import {table_data} from "../table-data";
 
 /**
  *
@@ -43,7 +44,8 @@ export function CreateContent(table:any){
     //body генерация
     const checkbox:TableCheckboxData[] = [];
     let index = -1;
-    for (const dataset of table.data){
+    const data = table_data(table.data, table);
+    for (const dataset of data){
         index++;
         const row = [];
         if (table.checkbox_td){
