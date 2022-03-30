@@ -8,8 +8,8 @@ export function createTh(elem:any, classTh:string,  table: any){
     const sort_rule  = table.sort_rule?.filter((e:SortConfig) =>
         e.key === elem.key
      )[0]
-    const onClickTh = ()=>{
-        thOnclick(elem, table, sort_rule);
+    const onClickTh = (event:any)=>{
+        thOnclick(elem, table, event, sort_rule);
     }
     let sort = createThSort(elem, sort_rule);
     return  (
