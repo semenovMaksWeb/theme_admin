@@ -22,8 +22,8 @@ export function style_all_result(elem:any){
  * @param table
  * функция возвращает body, header таблицы
  */
-export function CreateContent(table:any){
-    if (!table.data){
+export function CreateContent(table:any ){
+    if (!table.data && table?.data?.length !== 0){
         return {body: [], checkbox: [], header: []};
     }
     const body:any = [];
