@@ -7,11 +7,17 @@
 
 .table{
   outline: var(--outline--table);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .table__header{
   outline: var(--outline--table);
   display: flex;
+}
+.table__body{
+
 }
 .table__tr{
   display: flex;
