@@ -4,6 +4,8 @@ export const id_1 = {
     id: 1,
     type_table: "client",
     style:{
+        width: "200px",
+        max_height: "300px",
         order: 1,
         margin: "0px 0px 10px 0px",
         hidden_text_overflow: true,

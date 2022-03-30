@@ -4,9 +4,9 @@ import {ComponentsTypes} from "../../../../store/type/components";
 import {store} from "../../../../store";
 
 export function CreateCheckboxTd(table:any, dataset:any, index:number){
-
     const key_checkbox = dataset[table.key_main];
     const change = (event:any)=>{
+        console.log(table)
         table.checkbox_data[index].value = event.target.checked;
         store.dispatch({
             type: ComponentsTypes.CREATE_CHECKBOX_COMPONENT,
