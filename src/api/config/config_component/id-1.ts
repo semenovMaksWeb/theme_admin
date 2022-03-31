@@ -12,7 +12,7 @@ export const id_1 = {
     },
     paginator:{
       page: 1,
-      limit:15,
+      limit:5,
       arrows_pagination: true,
     },
     checkbox_data:[],
