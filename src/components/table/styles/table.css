@@ -3,6 +3,8 @@
   --outline--cell-size:2px;
   --width__elem: 40px;
   --table__bg_header: #fff;
+  --table_header_text_align: left;
+  --table_body_text_align: left;
 }
 
 
@@ -24,6 +26,7 @@
 }
 
 .table__header{
+  text-align: var(--table_header_text_align);
   outline: var(--outline--table);
   display: flex;
   background: var(--table__bg_header);
@@ -31,7 +34,7 @@
   top: 0;
 }
 .table__body{
-
+  text-align: var(--table_body_text_align);
 }
 .table__tr{
   display: flex;

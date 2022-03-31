@@ -3,12 +3,20 @@ import {TypeApiMethods} from "../../../interface/type/typeApi";
 export const id_1 = {
     id: 1,
     type_table: "client",
+    class:{
+        hidden_text_overflow: true,
+    },
     style:{
         width: "700px",
         max_height: "300px",
         order: 1,
         margin: "0px 0px 10px 0px",
-        hidden_text_overflow: true,
+        header:{
+            text_align: 'center',
+        },
+        body:{
+            text_align: 'center',
+        },
     },
     paginator:{
       type: "scroll",

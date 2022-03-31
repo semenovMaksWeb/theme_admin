@@ -6,6 +6,7 @@ import {useActions} from "../../hook/use-actions";
 import {componentsStyle} from "../../servers/css/components_style";
 import {Paginator} from "./paginator/paginator";
 import {PaginatorType} from "../../interface/table-data/PaginatorConfig";
+import {generatorStyle} from "../../servers/css/generator_style";
 
 export function Table(props:any){
     const  {CreateCheckboxData, DataSaveTable}= useActions();
@@ -31,16 +32,19 @@ export function Table(props:any){
         return  (<><div>Таблица не иницилизирована!</div> </>)
     }
     const {components_style} = componentsStyle(table);
+    const {style:styleBody} = generatorStyle(table?.style?.body, 'table_body');
+    const {style:styleHeader} = generatorStyle(table?.style?.header, 'table_header');
+    console.log(styleBody, styleHeader)
     if (table.paginator.type === PaginatorType.page){
         paginator = <Paginator id={props.id} />
     }
     return(
         <>
             <div className="table components" data-id={table.id} style={components_style} >
-                    <div className="table__header" >
+                    <div className="table__header"  style={styleHeader}>
                         {header}
                     </div>
-                <div className="table__body">
+                <div className="table__body" style={styleBody}>
                     {body}
                 </div>
                 <div className="paginator__table">

@@ -1,7 +1,7 @@
 import React from "react";
 import {typeSchemaTable} from "../../../../interface/type/typeSchemaTable";
 import {Button} from "../../../button/button";
-import {GeneratorCss} from "../../../../servers/css/generator_css";
+import {generatorClass} from "../../../../servers/css/generator_class";
 import { CreateCheckboxTd } from "./create_checkbox_td";
 import {TableCheckboxData} from "../../../../interface/tableCheckboxData";
 import {createTh} from "./create-th/create-th";
@@ -28,7 +28,7 @@ export function CreateContent(table:any ){
     }
     const body:any = [];
     const header:any = [];
-    const { className } = GeneratorCss(table.style);
+    const { className } = generatorClass(table.class);
     const classTh = `table__th table_elem ${className}`
     const classTd = `table__td table_elem ${className}`
     const classTr = `table__tr`
