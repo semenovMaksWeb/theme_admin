@@ -1,6 +1,7 @@
 import {SaveValuesForm, UpdateValuesForm} from "./form";
 import {CreateCheckboxData, DeleteCheckboxTable} from "./table";
 import {SortConfig} from "../../interface/table-data/SortConfig";
+import {PaginatorConfig} from "../../interface/table-data/PaginatorConfig";
 
 export enum ComponentsTypes {
     CREATE_COMPONENT="CREATE_COMPONENT",
@@ -11,7 +12,16 @@ export enum ComponentsTypes {
     SAVE_VALUES_FORM="SAVE_VALUES_FORM",
     CREATE_CHECKBOX_COMPONENT="CREATE_CHECKBOX_COMPONENT",
     DELETE_CHECKBOX_COMPONENT="DELETE_CHECKBOX_COMPONENT",
-    UPDATE_SORT_RULE = "UPDATE_SORT_RULE"
+    UPDATE_SORT_RULE = "UPDATE_SORT_RULE",
+    PAGINATOR_SAVE = "PAGINATOR_SAVE",
+}
+
+export interface PaginatorSave{
+    type: ComponentsTypes.PAGINATOR_SAVE,
+    payload: {
+        data: PaginatorConfig,
+        id: number,
+    },
 }
 
 
@@ -50,7 +60,9 @@ export interface CreateComponents{
 }
 
 
-export type ComponentsAction = DeleteCheckboxTable | UpdateSortRule | CreateComponent | CreateCheckboxData | ResetComponents | CreateDataComponents | CreateComponents | UpdateValuesForm | SaveValuesForm;
+export type ComponentsAction =
+    DeleteCheckboxTable | PaginatorSave| UpdateSortRule | CreateComponent | CreateCheckboxData | ResetComponents
+    | CreateDataComponents | CreateComponents | UpdateValuesForm | SaveValuesForm;
 
 export interface ComponentsReducers {
     components: any

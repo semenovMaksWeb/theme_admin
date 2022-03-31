@@ -9,7 +9,7 @@ export function table_data(data:any, table:any){
         filterDataTable(dataset, []);
         groupDataTable(dataset, []);
         sortDataTable(dataset, table.sort_rule);
-        // dataset = paginatorDataTable(dataset, {limit: 1, page:1});
+        dataset = paginatorDataTable(dataset, table.paginator);
         return dataset;
     }
     return data;

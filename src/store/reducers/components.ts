@@ -74,7 +74,18 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
-            default:
+        case ComponentsTypes.PAGINATOR_SAVE:
+            return {
+                ...state,
+                components:{
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        paginator: action.payload.data
+                    }
+                }
+            }
+        default:
                 return state
     }
 }
