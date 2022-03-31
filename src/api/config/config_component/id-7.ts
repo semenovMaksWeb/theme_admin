@@ -5,6 +5,7 @@
          border: "1px solid #000",
          border_radius: "4px",
          margin: "0 auto",
+         color: "#000"
      },
      type: "button",
      text: "редактировать",

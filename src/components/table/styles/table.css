@@ -5,6 +5,7 @@
   --table__bg_header: #fff;
   --table_header_text_align: left;
   --table_body_text_align: left;
+  --table_body_color: #fff;
 }
 
 
@@ -35,6 +36,7 @@
 }
 .table__body{
   text-align: var(--table_body_text_align);
+  color: var(--table_body_color);
 }
 .table__tr{
   display: flex;

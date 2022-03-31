@@ -15,6 +15,7 @@ export const id_1 = {
             text_align: 'center',
         },
         body:{
+            color: 'green',
             text_align: 'center',
         },
     },
