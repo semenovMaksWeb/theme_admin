@@ -10,6 +10,11 @@ export const id_1 = {
         margin: "0px 0px 10px 0px",
         hidden_text_overflow: true,
     },
+    paginator:{
+      page: 1,
+      limit:15,
+      arrows_pagination: true,
+    },
     checkbox_data:[],
     checkbox_td: true,
     screen_visible:false,

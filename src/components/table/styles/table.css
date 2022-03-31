@@ -6,7 +6,15 @@
 }
 
 
+.paginator__table{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
 .table{
+  position: relative;
   outline: var(--outline--table);
   display: flex;
   flex-direction: column;
@@ -18,7 +26,8 @@
   outline: var(--outline--table);
   display: flex;
   background: var(--table__bg_header);
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 .table__body{
 

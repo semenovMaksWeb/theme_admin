@@ -4,11 +4,9 @@ import {useTypeSelector} from "../../hook/use-typed-selector";
 import {CreateContent} from "./lib/create-dom/create-content";
 import {useActions} from "../../hook/use-actions";
 import {componentsStyle} from "../../servers/css/components_style";
+import {Paginator} from "./paginator/paginator";
 
 export function Table(props:any){
-    const [styleTop, saveStyleTop] = useState({top: "0px"});
-
-
     const  {CreateCheckboxData, DataSaveTable}= useActions();
     const  components = useTypeSelector(state => state.components.components);
     const table:any = components[props.id];
@@ -31,21 +29,19 @@ export function Table(props:any){
         return  (<><div>Таблица не иницилизирована!</div> </>)
     }
     const {components_style} = componentsStyle(table);
-    const scrollTableEvent =(e:any)=>{
-        saveStyleTop({top: `${e.target.scrollTop}px`});
-    }
     return(
         <>
-            <div className="table components" data-id={table.id} style={components_style} onScroll={scrollTableEvent}>
-                <div className="fixed__container">
-                    <div className="table__header" style={styleTop}>
+            <div className="table components" data-id={table.id} style={components_style} >
+                    <div className="table__header" >
                         {header}
                     </div>
-
-                </div>
                 <div className="table__body">
                     {body}
                 </div>
+                <div className="paginator__table">
+                    <Paginator id={props.id} />
+                </div>
+
             </div>
         </>
     )
