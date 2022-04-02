@@ -18,6 +18,12 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
             if (res?.data){
                 content[index] = res.data;
             }
+            /**
+             * #TODO составить список при каких условии не нужно выполнять калбек функции дальше!
+             */
+            if (res?.status !== 200){
+                return;
+            }
         }
         if (config.name === CallbackName.delete_table_row) {
             CallbackDeleteTableRow(config, content);

@@ -5,6 +5,8 @@
     --component-bg: inherit;
     --component-border: inherit;
     --component-border-radius: inherit;
+    --component-max_height: auto;
+    --component-width: auto;
 }
 
 *{
@@ -16,6 +18,8 @@
     text-overflow: ellipsis;
 }
 .components{
+    width: var(--component-width);
+    max-height: var(--component-max_height);
     margin: var(--component-margin);
     order: var(--component-order);
     color: var(--component-color);

@@ -1,0 +1,6 @@
+.paginator{
+    display: flex;
+}
+.paginator_elem{
+    cursor: pointer;
+}

@@ -2,16 +2,41 @@
   --outline--table: 2px solid #000;
   --outline--cell-size:2px;
   --width__elem: 40px;
+  --table__bg_header: #fff;
+  --table_header_text_align: left;
+  --table_body_text_align: left;
+  --table_body_color: #fff;
 }
 
 
+.paginator__table{
+  margin-top: 4px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
 .table{
+  position: relative;
   outline: var(--outline--table);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto;
 }
 
 .table__header{
+  text-align: var(--table_header_text_align);
   outline: var(--outline--table);
   display: flex;
+  background: var(--table__bg_header);
+  position: sticky;
+  top: 0;
+}
+.table__body{
+  text-align: var(--table_body_text_align);
+  color: var(--table_body_color);
 }
 .table__tr{
   display: flex;
@@ -19,7 +44,7 @@
 
 }
 .table__th{
-
+  position: relative;
 }
 .table__td{
 
@@ -30,6 +55,25 @@
   width: var(--width__elem);
   padding: 2px;
 }
+
+/* th стили */
+.th__sort{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.th__sort.active{
+  display: block;
+}
+.th__sort_icons{
+  width: 12px;
+}
+
+.table__th:hover .th__sort{
+  display: block;
+}
+
 /* багофикс css outline */
 .table .table__th:first-child{
   margin-left: 0;
