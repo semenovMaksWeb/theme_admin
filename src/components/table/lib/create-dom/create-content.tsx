@@ -42,15 +42,11 @@ export function CreateContent(table:any ){
     }
 
     //body генерация
-    const checkbox:TableCheckboxData[] = [];
-    let index = -1;
     const data = table_data(table.data, table);
     for (const dataset of data){
-        index++;
         const row = [];
         if (table.checkbox_td){
-            const { checkbox_value, row_checkbox } = CreateCheckboxTd(table, dataset, index);
-            checkbox.push(checkbox_value);
+            const { row_checkbox } = CreateCheckboxTd(table, dataset);
             row.push(row_checkbox);
         }
         for (const key in table.schema) {
@@ -75,6 +71,6 @@ export function CreateContent(table:any ){
         body.push(<div key={dataset[table.key_main]} className={classTr}>{row}</div>);
     }
     return {
-        header, body, checkbox
+        header, body
     }
 }

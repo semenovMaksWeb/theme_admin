@@ -12,18 +12,31 @@ export function DataSaveTable(id:number){
         const {body, params } = frontData(api_url.config, {});
         const response = await generatorUrlApi(api_url, params, body);
         if (response?.data){
+            const  data = response?.data.map((e:any, index:number)=>
+                {
+                    return {
+                        ...e,
+                        index: index
+                    }
+                }
+             )
             dispatch({
                 type: ComponentsTypes.CREATE_DATA_COMPONENT,
-                payload:  {id: id, data:  response.data}
+                payload:  {id: id, data:data}
             })
         }
     }
 }
-export function CreateCheckboxData(id:number, data:TableCheckboxData[]){
-    return async (dispatch: Dispatch<TableAction>) => {
+export function CreateCheckboxData(id:number){
+    return async (dispatch: Dispatch<TableAction>, getStore:any) => {
+        const table = getStore().components.components[id];
+        const checkbox:TableCheckboxData = {};
+        for (const dataset of table.data){
+            checkbox[dataset[table.key_main]] = false;
+        }
         dispatch({
             type: ComponentsTypes.CREATE_CHECKBOX_COMPONENT,
-            payload:  {id: id, data:  data}
+            payload:  {id: id, data:  checkbox}
         })
 
     }

@@ -10,7 +10,6 @@ export function baseApi(result: AxiosResponse<any, any>){
         else if (result.status === 404){
             store.dispatch( {type: AlertTypes.CREATE_ALERT, payload: { data: { text: result.data.info, type: "errors" } } } )
         }
-
     }
     return result;
 }

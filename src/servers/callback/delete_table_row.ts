@@ -7,7 +7,6 @@ export function CallbackDeleteTableRow(config:ConfigCallback, content:any){
     const {all} = frontData(config.params.config, content);
     // id удаляемой записи
     const id:any = Object.values(all)[0];
-    console.log(id)
     // id таблицы
     const id_table = config.params.id;
     // store таблица
