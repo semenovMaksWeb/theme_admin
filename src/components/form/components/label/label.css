@@ -1,0 +1,6 @@
+:root{
+    --form_label_margin : 0 5px 0 0;
+}
+.form__label{
+    margin: var(--form_label_margin);
+}

@@ -1,0 +1,8 @@
+.form__error-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.form__error-text{
+    color:red;
+    font-size: 10px;
+}

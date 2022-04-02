@@ -1,0 +1,12 @@
+:root{
+    --form__wrapper-margin: 0 0 10px 0;
+}
+
+
+.form__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.form__wrapper_container{
+    margin: var(--form__wrapper-margin);
+}
