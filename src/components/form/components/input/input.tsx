@@ -1,7 +1,6 @@
 import React from "react";
 import {useTypeSelector} from "../../../../hook/use-typed-selector";
 import {useActions} from "../../../../hook/use-actions";
-import {ErrorsText} from "../errors_text/errors_text";
 import {addErrorsClass} from "../../lib/add-errors-class";
 
 export function Input(props:any){
