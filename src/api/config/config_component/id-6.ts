@@ -28,8 +28,9 @@ export const id_6 = {
           ]
      },
      type: "form",
-     screen_visible:true,
+     screen_visible:false,
      name: "",
+     errors: {},
      values:{
           name_theme: "",
           description_theme: "",
