@@ -5,6 +5,7 @@ import {componentsStyle} from "../../servers/css/components_style";
 import {frontData} from "../../servers/front_data";
 import {ConvertSchemaValue} from "./lib/convert_schema_value";
 import {generatorUrlApi} from "../../api/generatorUrlApi";
+import "./form_errors.css"
 
 export function Form(props:any){
     const  components = useTypeSelector(state => state.components.components);

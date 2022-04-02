@@ -8,4 +8,5 @@ export function reset_values_form(id:number){
         res[key] = "";
     }
     store.dispatch({type: ComponentsTypes.SAVE_VALUES_FORM, payload:{ id: id, values: res }});
+    store.dispatch({type: ComponentsTypes.SAVE_ERRORS_FORM, payload:{ id: id, errors: {} }});
 }
