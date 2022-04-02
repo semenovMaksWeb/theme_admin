@@ -4,10 +4,12 @@ import {CallbackDeleteTableRow} from "./delete_table_row";
 import {reset_values_form} from "./reset_values_form";
 import {add_table_row} from "./add_table_row";
 import {router_push} from "./router_push";
-import {ErrorsBack} from "./errors-back";
+import {errorsBack} from "./errors-back";
 
 export async function Callback(event:any, configCallback:ConfigCallback[], content:any={}, history?:any){
-    event.preventDefault();
+    if (event){
+        event.preventDefault();
+    }
     if (!configCallback){
         return;
     }
@@ -23,7 +25,7 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
              * #TODO составить список при каких условии не нужно выполнять калбек функции дальше!
              */
             if (res?.status !== 200){
-                ErrorsBack(config.params.errors, res?.data.errors)
+                await errorsBack(config.params.errors, res?.data.errors)
                 return;
             }
         }

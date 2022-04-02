@@ -6,7 +6,16 @@ export const id_6 = {
        order: 5,
      },
      api_data: {
-          url:{ url: "theme/get_id", type: TypeApiMethods.get },
+          url:{ url: "theme/get_id", type: TypeApiMethods.get,
+               errors:{
+                    callback:[{
+                         name: "router_push",
+                         params:{
+                              url: "/screen/1",
+                              config:{}
+                         }
+                    }]
+               }, },
           config:{
                id: {
                     result: "params",
