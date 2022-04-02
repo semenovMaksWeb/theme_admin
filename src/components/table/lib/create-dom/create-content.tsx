@@ -36,7 +36,6 @@ export function CreateContent(table:any ){
     if (table.checkbox_td){
         header.push(<div key='checkbox_th' className={classTh}></div>);
     }
-    console.log(table)
     for (const key in table.schema) {
         const elem = table.schema[key];
         header.push(createTh(elem, classTh, table));

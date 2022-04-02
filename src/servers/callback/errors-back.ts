@@ -9,7 +9,6 @@ export function ErrorsBack(config_errors?:any, errors?:any){
             store.dispatch({type: ComponentsTypes.SAVE_ERRORS_FORM, payload: {
                 id: config_errors.id, errors:errors
                 }})
-            console.log('это форма!!', components)
         }
     }
 }
