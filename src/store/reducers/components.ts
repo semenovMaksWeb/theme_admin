@@ -50,7 +50,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
-        // сбросить данные в форме
+        // изменить данные в форме
         case ComponentsTypes.SAVE_VALUES_FORM:
             return  {
                 ...state,
@@ -62,6 +62,19 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        case ComponentsTypes.SAVE_ERRORS_FORM:
+            return  {
+                ...state,
+                components: {
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        errors: action.payload.errors,
+                    }
+                }
+            }
+
+
             // изменить sort_rule
         case ComponentsTypes.UPDATE_SORT_RULE:
             return {

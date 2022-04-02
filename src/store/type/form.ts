@@ -15,3 +15,10 @@ export interface SaveValuesForm{
         values:any,
     }
 }
+export interface SaveErrorForm{
+    type: ComponentsTypes.SAVE_ERRORS_FORM,
+    payload:{
+        id: number,
+        errors:any,
+    }
+}
