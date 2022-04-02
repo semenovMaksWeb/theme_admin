@@ -1,4 +1,5 @@
 import {ComponentsAction, ComponentsReducers, ComponentsState, ComponentsTypes} from "../type/components";
+import {AlertTypes} from "../type/alert";
 
 export const ComponentsReducer = (state = ComponentsState, action: ComponentsAction): ComponentsReducers => {
     switch (action.type) {
@@ -87,6 +88,7 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+        //    сохранить пагинацию
         case ComponentsTypes.PAGINATOR_SAVE:
             return {
                 ...state,
@@ -95,6 +97,20 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     [action.payload.id]:{
                         ...state.components[action.payload.id],
                         paginator: action.payload.data
+                    }
+                }
+            }
+        case ComponentsTypes.RESET_KEY_ERRORS_FORM:
+            return {
+                ...state,
+                components:{
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        errors: {
+                            ...state.components[action.payload.id].errors,
+                            [action.payload.key]: null,
+                        }
                     }
                 }
             }

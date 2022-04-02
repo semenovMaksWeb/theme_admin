@@ -22,3 +22,10 @@ export interface SaveErrorForm{
         errors:any,
     }
 }
+export interface ResetKeyErrorsForm{
+    type: ComponentsTypes.RESET_KEY_ERRORS_FORM,
+    payload:{
+        id: number,
+        key:string,
+    }
+}
