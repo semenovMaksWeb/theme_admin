@@ -15,25 +15,15 @@ export const id_6 = {
                     var_type: 'number',
                },
           },
-          schema_value:[
-              {
-                   key_api: "name",
-                   key_values: "name_theme",
-              },
-              {
-                    key_api: "description",
-                    key_values: "description_theme",
-              }
 
-          ]
      },
      type: "form",
      screen_visible:false,
      name: "",
      errors: {},
      values:{
-          name_theme: "",
-          description_theme: "",
+          name: "",
+          description: "",
      },
      schema:[
           {
@@ -46,7 +36,7 @@ export const id_6 = {
                children:[
                     {
                          order: 1,
-                         id: "name_theme",
+                         id: "name",
                          val_type: "string",
                          type: "input",
                          label: {
@@ -55,7 +45,7 @@ export const id_6 = {
                     },
                     {
                          order: 2,
-                         id: "description_theme",
+                         id: "description",
                          val_type: "string",
                          type: "input",
                          label:{
@@ -77,19 +67,20 @@ export const id_6 = {
                                    {
                                         name: "api",
                                         params:{
+                                             errors: { id: 6 },
                                              url:{ url: "theme/update_all", type: TypeApiMethods.put},
                                              config:{
                                                   name: {
                                                        result: "body",
                                                        type:2,
                                                        id:6,
-                                                       name: 'name_theme'
+                                                       name: 'name'
                                                   },
                                                   description: {
                                                        result: "body",
                                                        type:2,
                                                        id:6,
-                                                       name: 'description_theme'
+                                                       name: 'description'
                                                   },
                                                   id: {
                                                        result: "params",
