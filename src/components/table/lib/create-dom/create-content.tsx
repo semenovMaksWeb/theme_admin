@@ -43,13 +43,11 @@ export function CreateContent(table:any ){
 
     //body генерация
     const checkbox:TableCheckboxData[] = [];
-    let index = -1;
     const data = table_data(table.data, table);
     for (const dataset of data){
-        index++;
         const row = [];
         if (table.checkbox_td){
-            const { checkbox_value, row_checkbox } = CreateCheckboxTd(table, dataset, index);
+            const { checkbox_value, row_checkbox } = CreateCheckboxTd(table, dataset);
             checkbox.push(checkbox_value);
             row.push(row_checkbox);
         }

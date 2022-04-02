@@ -12,9 +12,17 @@ export function DataSaveTable(id:number){
         const {body, params } = frontData(api_url.config, {});
         const response = await generatorUrlApi(api_url, params, body);
         if (response?.data){
+            const  data = response?.data.map((e:any, index:number)=>
+                {
+                    return {
+                        ...e,
+                        index: index
+                    }
+                }
+             )
             dispatch({
                 type: ComponentsTypes.CREATE_DATA_COMPONENT,
-                payload:  {id: id, data:  response.data}
+                payload:  {id: id, data:data}
             })
         }
     }
