@@ -20,7 +20,7 @@ export const id_1 = {
         },
     },
     paginator:{
-      type: "scroll",
+      type: "page",
       page: 1,
       limit:5,
       arrows_pagination: true,

@@ -8,9 +8,10 @@ export const id_4 = {
      type: "form",
      screen_visible:false,
      name: "",
+     errors:{},
      values:{
-          name_theme: "",
-          description_theme: "",
+          name: "",
+          description: "",
      },
      schema:[
           {
@@ -23,7 +24,7 @@ export const id_4 = {
                children:[
                     {
                          order: 1,
-                         id: "name_theme",
+                         id: "name",
                          val_type: "string",
                          type: "input",
                          label: {
@@ -32,7 +33,7 @@ export const id_4 = {
                     },
                     {
                          order: 2,
-                         id: "description_theme",
+                         id: "description",
                          val_type: "string",
                          type: "input",
                          label:{
@@ -54,19 +55,20 @@ export const id_4 = {
                                    {
                                         name: "api",
                                         params:{
+                                             errors: { id: 4 },
                                              url:{ url: "theme/save", type: TypeApiMethods.post},
                                              config:{
                                                   name: {
                                                        result: "body",
                                                        type:2,
                                                        id:4,
-                                                       name: 'name_theme'
+                                                       name: 'name'
                                                   },
                                                   description: {
                                                        result: "body",
                                                        type:2,
                                                        id:4,
-                                                       name: 'description_theme'
+                                                       name: 'description'
                                                   }
                                              }
                                         }
