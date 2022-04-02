@@ -12,7 +12,7 @@ export interface CreateCheckboxData{
     type: ComponentsTypes.CREATE_CHECKBOX_COMPONENT,
     payload: {
         id:number,
-        data:TableCheckboxData[],
+        data:TableCheckboxData,
     },
 }
 export interface DeleteCheckboxTable{

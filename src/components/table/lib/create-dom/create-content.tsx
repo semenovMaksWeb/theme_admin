@@ -36,19 +36,18 @@ export function CreateContent(table:any ){
     if (table.checkbox_td){
         header.push(<div key='checkbox_th' className={classTh}></div>);
     }
+    console.log(table)
     for (const key in table.schema) {
         const elem = table.schema[key];
         header.push(createTh(elem, classTh, table));
     }
 
     //body генерация
-    const checkbox:TableCheckboxData[] = [];
     const data = table_data(table.data, table);
     for (const dataset of data){
         const row = [];
         if (table.checkbox_td){
-            const { checkbox_value, row_checkbox } = CreateCheckboxTd(table, dataset);
-            checkbox.push(checkbox_value);
+            const { row_checkbox } = CreateCheckboxTd(table, dataset);
             row.push(row_checkbox);
         }
         for (const key in table.schema) {
@@ -73,6 +72,6 @@ export function CreateContent(table:any ){
         body.push(<div key={dataset[table.key_main]} className={classTr}>{row}</div>);
     }
     return {
-        header, body, checkbox
+        header, body
     }
 }

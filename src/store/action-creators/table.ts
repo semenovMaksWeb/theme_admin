@@ -27,11 +27,16 @@ export function DataSaveTable(id:number){
         }
     }
 }
-export function CreateCheckboxData(id:number, data:TableCheckboxData[]){
-    return async (dispatch: Dispatch<TableAction>) => {
+export function CreateCheckboxData(id:number){
+    return async (dispatch: Dispatch<TableAction>, getStore:any) => {
+        const table = getStore().components.components[id];
+        const checkbox:TableCheckboxData = {};
+        for (const dataset of table.data){
+            checkbox[dataset[table.key_main]] = false;
+        }
         dispatch({
             type: ComponentsTypes.CREATE_CHECKBOX_COMPONENT,
-            payload:  {id: id, data:  data}
+            payload:  {id: id, data:  checkbox}
         })
 
     }

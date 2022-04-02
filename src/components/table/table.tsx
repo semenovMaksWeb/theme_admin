@@ -21,10 +21,10 @@ export function Table(props:any){
     /**
      * #TODO CreateContent отрабатывает при каждом скролле критично!
      */
-    const  {body, header, checkbox} = CreateContent(table);
+    const  {body, header} = CreateContent(table);
     useEffect(()=>{
-        if (table && checkbox.length > 0){
-            CreateCheckboxData(table.id, checkbox);
+        if (table && table.data){
+            CreateCheckboxData(table.id);
         }
     }, [table.data])
 
@@ -34,7 +34,6 @@ export function Table(props:any){
     const {components_style} = componentsStyle(table);
     const {style:styleBody} = generatorStyle(table?.style?.body, 'table_body');
     const {style:styleHeader} = generatorStyle(table?.style?.header, 'table_header');
-    console.log(styleBody, styleHeader)
     if (table.paginator.type === PaginatorType.page){
         paginator = <Paginator id={props.id} />
     }
