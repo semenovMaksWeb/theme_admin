@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * @function componentsStyle
+ * генерация стилей для каждого компонента универсальная функция
+ * каждый компонент имеет эти переменные и обрабатывает их одинаковой логикой
+ */
 export function componentsStyle(elem:any){
     const components_style = {
         '--component-max_height':elem?.style?.max_height ? elem.style.max_height: "auto",

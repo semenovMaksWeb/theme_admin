@@ -1,6 +1,13 @@
 import {FrontData} from "../../interface/config/configFrontData";
 import {store} from "../../store"
 
+
+
+/**
+ * @function fd_3
+ * функция получение контента универсальными функциями которые требует хард логики
+ */
+
 export function fd_3(config:FrontData){
     if (config.id){
         const components:any = store.getState().components.components[config.id];

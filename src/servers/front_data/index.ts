@@ -5,6 +5,10 @@ import {fd_3} from "./fd_3";
 import {fd_4} from "./fd_4";
 import {validateData} from "./validate_data";
 
+/**
+ *@function frontData
+ * функция универсальная точка входа получение данных на фронте для дальшейней её обработки
+ */
 export function frontData(configFrontData:ConfigFrontData, content:any){
     const params:any = {};
     const body:any = {};

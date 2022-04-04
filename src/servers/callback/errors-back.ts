@@ -3,6 +3,11 @@ import {TypeComponents} from "../../interface/type/typeComponents";
 import {ComponentsTypes} from "../../store/type/components";
 import {Callback} from "./index";
 
+/**
+ * @function errorsBack
+ * калбек функция
+ * дополнительные обработки ошибок на стороне бэка
+ */
 export async function errorsBack(config_errors?:any, errors?:any, history?: any){
     console.log(config_errors)
     if (config_errors){

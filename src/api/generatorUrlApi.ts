@@ -4,7 +4,7 @@ import {TypeApi, TypeApiMethods} from "../interface/type/typeApi";
 export const apiUrl = "https://localhost:7087";
 
 /**
- * function generatorUrlApi
+ * @function generatorUrlApi
  * принимает конфиг запроса который нужно генерировать и params и body
  * обработки
  * запросов get, post, delete , put

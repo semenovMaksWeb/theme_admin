@@ -1,6 +1,11 @@
 import {Dispatch} from "redux";
 import {ComponentsAction, ComponentsTypes} from "../type/components";
 
+/**
+ * @function UpdateValuesForm
+ * функция store
+ * изменяет данные в форме + очищает ошибки при изменения ввода
+ */
 export function UpdateValuesForm(id:number, key:string, value:any){
     return (dispatch: Dispatch<ComponentsAction>, getStore:any) => {
         const errors = getStore().components.components[id].errors;
