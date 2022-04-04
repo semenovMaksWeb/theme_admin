@@ -3,8 +3,15 @@ export enum BreadcrumbsType{
     CREATE_BREADCRUMBS="CREATE_BREADCRUMBS",
 }
 export interface BreadcrumbsReducers {
-    breadcrumbs: any
+    breadcrumbs: Breadcrumbs[]
 }
+export interface Breadcrumbs{
+    key:number;
+    name: string;
+    url?:string;
+
+}
+
 export const BreadcrumbsState: BreadcrumbsReducers = {
     breadcrumbs: []
 }
@@ -12,7 +19,7 @@ export const BreadcrumbsState: BreadcrumbsReducers = {
 export interface CreateBreadcrumbs{
     type: BreadcrumbsType.CREATE_BREADCRUMBS,
     payload: {
-        breadcrumbs: BreadcrumbsReducers,
+        breadcrumbs: Breadcrumbs[],
     },
 }
 

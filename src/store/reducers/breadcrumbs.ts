@@ -4,7 +4,7 @@ export const BreadcrumbsReducer = (state = BreadcrumbsState, action:BreadcrumbsA
         case BreadcrumbsType.CREATE_BREADCRUMBS:
             return {
                 ...state,
-                breadcrumbs:   action.payload.breadcrumbs
+                breadcrumbs: action.payload.breadcrumbs
             }
         default:
             return state
