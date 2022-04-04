@@ -2,6 +2,13 @@ import axios from "axios";
 import {baseApi} from "./baseApi";
 import {TypeApi, TypeApiMethods} from "../interface/type/typeApi";
 export const apiUrl = "https://localhost:7087";
+
+/**
+ * function generatorUrlApi
+ * принимает конфиг запроса который нужно генерировать и params и body
+ * обработки
+ * запросов get, post, delete , put
+ */
 export  async function generatorUrlApi(config: TypeApi, params: any, body: any){
     let url:string = config.url;
     if (!config.domain){
@@ -21,6 +28,10 @@ export  async function generatorUrlApi(config: TypeApi, params: any, body: any){
     }
     return  null;
 }
+
+/**
+ * обработка всех ошибок от бэка
+ */
 axios.interceptors.response.use(function (response) {
     return response;
 }, (error)=>{
