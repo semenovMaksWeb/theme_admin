@@ -1,3 +1,8 @@
+/**
+ * @function generatorStyle
+ * функция универсальная используется для обраотки элементов компонентов который имеют разные название переменых
+ * название переменых вначале имеют prefect отличительное имя после чего идет имя параметра
+ */
 export function generatorStyle(styleParams?:any, prefect:string=""){
     const style:any = {};
     if (!styleParams){

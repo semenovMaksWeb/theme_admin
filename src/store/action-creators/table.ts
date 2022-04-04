@@ -5,7 +5,11 @@ import {TableCheckboxData} from "../../interface/tableCheckboxData";
 import {generatorUrlApi} from "../../api/generatorUrlApi";
 import {frontData} from "../../servers/front_data";
 
-
+/**
+ * @function DataSaveTable
+ * функция store
+ * получается данные по api + парсит их + сохраняет в store для отображения
+ */
 export function DataSaveTable(id:number){
     return async (dispatch: Dispatch<TableAction>, getStore:any) => {
         const api_url = getStore().components.components[id].api_url;
@@ -27,6 +31,12 @@ export function DataSaveTable(id:number){
         }
     }
 }
+
+/**
+ * @function CreateCheckboxData
+ * функция store
+ * сохраняет список checkbox для отображения
+ */
 export function CreateCheckboxData(id:number){
     return async (dispatch: Dispatch<TableAction>, getStore:any) => {
         const table = getStore().components.components[id];

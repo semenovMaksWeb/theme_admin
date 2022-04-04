@@ -1,3 +1,8 @@
+/**
+ * @function convert_object_in_str_query
+ * функция конвертирует объект query в строку
+ * используется для вызова router-push
+ */
 export function convert_object_in_str_query(object:any){
     let str_query = "";
     for (const key in object) {

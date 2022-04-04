@@ -2,6 +2,11 @@ import {ConfigCallback} from "../../interface/config/configCallback";
 import {frontData} from "../front_data";
 import {generatorUrlApi} from "../../api/generatorUrlApi";
 
+/**
+ * @function callbackApi
+ *  калбек функция
+ *  отправляет запрос на бэк
+ */
 export async function callbackApi(config:ConfigCallback, content:any){
     // url - путь url api
     // config получить данные для url
