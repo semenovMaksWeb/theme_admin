@@ -9,7 +9,7 @@ import {AlertTypes} from "../store/type/alert";
  * 1. проверка наличия ключа info который хранит строку которую нужно вывести в алетр после вызова запроса
  */
 export function baseApi(result: AxiosResponse<any, any>){
-    if (result.data.info){
+    if (result?.data?.info){
         if (result.status === 200){
             store.dispatch( {type: AlertTypes.CREATE_ALERT, payload: { data: { text: result.data.info, type: "success" } } } )
         }
