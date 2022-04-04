@@ -46,7 +46,7 @@ export function CreateContent(table:any ){
     for (const dataset of data){
         const row = [];
         if (table.checkbox_td){
-            const { row_checkbox } = CreateCheckboxTd(table, dataset);
+            const {row_checkbox}  = CreateCheckboxTd(table, dataset);
             row.push(row_checkbox);
         }
         for (const key in table.schema) {
@@ -70,6 +70,7 @@ export function CreateContent(table:any ){
         }
         body.push(<div key={dataset[table.key_main]} className={classTr}>{row}</div>);
     }
+
     return {
         header, body
     }
