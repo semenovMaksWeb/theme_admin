@@ -3,15 +3,20 @@ import {TypeApiMethods} from "../../../interface/type/typeApi";
 export const id_2 = {
      id:2,
      style:{
-        color: "red",
-         bg: "transparent",
-         border: "1px solid red",
-         border_radius: "4px",
+        // color: "red",
+        //  bg: "transparent",
+        //  border: "1px solid red",
+        //  border_radius: "4px",
          margin: "0 auto",
+         height: "100%"
      },
      screen_visible:false,
      type: "button",
-     text: "удалить",
+     // text: "удалить",
+    icons: {
+      type: "svg",
+      url: "delete.svg"
+    },
      title: "удалить тему",
       event:{
           click:[

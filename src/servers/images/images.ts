@@ -1,5 +1,5 @@
-const url_image =  "https://localhost:7087/images/";
-const url_svg =  "https://localhost:7087/svg/";
+const url_image =  "https://localhost:7087/images";
+const url_svg =  "https://localhost:7087/svg";
 
 /**
  * @function images

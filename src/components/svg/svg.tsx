@@ -9,7 +9,10 @@ export interface TypePropsSvg {
 }
 
 export  function Svg(props:TypePropsSvg){
-    const class_name = `${props.class} object`
+    let class_name = "object";
+    if (props?.class){
+           class_name = `${props?.class} object`
+    }
     return (
         <object className={class_name} data={svg(props.url)} type="image/svg+xml" />
     )
