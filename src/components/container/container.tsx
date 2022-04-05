@@ -15,7 +15,6 @@ export function Container(props:any){
         return screen
     }, [container.children])
 
-    console.log(screen)
     return(
         <div className="container container__default components">
             {screen}

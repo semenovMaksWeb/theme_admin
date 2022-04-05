@@ -8,7 +8,6 @@ export function Input(props:any){
     const form:any = components[props.id_form];
     const {UpdateValuesForm} = useActions();
     const  className = useMemo(()=>{
-        console.log('input')
         let className = "form__input";
         let checkErrors = addErrorsClass(form, props.elem);
         if (checkErrors){
