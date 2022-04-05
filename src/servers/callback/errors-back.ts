@@ -9,7 +9,6 @@ import {Callback} from "./index";
  * дополнительные обработки ошибок на стороне бэка
  */
 export async function errorsBack(config_errors?:any, errors?:any, history?: any){
-    console.log(config_errors)
     if (config_errors){
         if (config_errors.id){
             const components:any = store.getState().components.components[config_errors.id];

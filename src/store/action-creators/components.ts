@@ -33,7 +33,6 @@ export function CreateScreen(id:number){
             payload:  {id: id, components: components.elements}
         })
         const breadcrumbs = components?.breadcrumbs ? components?.breadcrumbs : [];
-            console.log(breadcrumbs)
             dispatch({
                 type: BreadcrumbsType.CREATE_BREADCRUMBS,
                 payload:  { breadcrumbs: breadcrumbs}

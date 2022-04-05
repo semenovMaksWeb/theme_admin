@@ -6,7 +6,6 @@ import {Button} from "../button/button";
 
 export function FormSlot(props: any, check_wrapper = false){
     const  elem = useMemo(()=>{
-        console.log('FormSlot')
         const elem:any  = [];
         for (const e of props.elem) {
             if (e.type === "fieldset"){
