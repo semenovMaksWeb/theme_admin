@@ -1,5 +1,4 @@
 import React from "react";
-import {useTypeSelector} from "../../../hook/use-typed-selector";
 import "./paginator.css"
 import {PaginatorElement} from "./paginator_element/paginator_element"
 export interface PropsTypePaginator{
