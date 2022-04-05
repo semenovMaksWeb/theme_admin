@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import {useTypeSelector} from "../../../../hook/use-typed-selector";
 import {store} from "../../../../store";
 import {ComponentsTypes} from "../../../../store/type/components";
@@ -9,7 +9,7 @@ export interface PropsTypePaginator{
 export function PaginatorElement(props:PropsTypePaginator){
     const  components = useTypeSelector(state => state.components.components);
     const component:any = components[props.id];
-    let  arrows_pagination: JSX.Element = <></>;
+
     const savePage = (page:number)=>{
         const data:PaginatorConfig = {
             ...component.paginator,
@@ -26,18 +26,22 @@ export function PaginatorElement(props:PropsTypePaginator){
         }
     }
     const nextClick = ()=>{
-        if (component.data.length > component.paginator.page * component.paginator.limit){
+        if (component?.data?.length > component.paginator.page * component.paginator.limit){
             savePage(component.paginator.page+1)
         }
     }
+    const arrows_pagination = useMemo(() => {
+        if (component.paginator && component.paginator.arrows_pagination){
+            return  (
+                <>
+                    <div className="paginator_elem paginator_back" onClick={backClick}>Назад</div>
+                    <div className="paginator_elem paginator_active">{component.paginator.page}</div>
+                    <div className="paginator_elem paginator_next" onClick={nextClick}>Вперед</div>
+                </>
+            )
+        }
+        return  <></>;
+    }, [component.data,component.paginator, component.paginator.page, component.paginator.arrows_pagination])
 
-
-    if (component.paginator && component.paginator.arrows_pagination){
-        arrows_pagination = <>
-            <div className="paginator_elem paginator_back" onClick={backClick}>Назад</div>
-            <div className="paginator_elem paginator_active">{component.paginator.page}</div>
-            <div className="paginator_elem paginator_next" onClick={nextClick}>Вперед</div>
-        </>;
-    }
     return {arrows_pagination}
 }

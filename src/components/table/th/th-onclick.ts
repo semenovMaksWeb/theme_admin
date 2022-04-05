@@ -1,6 +1,6 @@
-import {store} from "../../../../../store";
-import {ComponentsTypes} from "../../../../../store/type/components";
-import {SortConfig, SortTypeConfig} from "../../../../../interface/table-data/SortConfig";
+import {store} from "../../../store";
+import {ComponentsTypes} from "../../../store/type/components";
+import {SortConfig, SortTypeConfig} from "../../../interface/table-data/SortConfig";
 
 
 function pushSortRule(elem:any, sort_rule?:SortConfig, order: number= 1){
