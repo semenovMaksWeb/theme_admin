@@ -6,6 +6,7 @@
   --table_header_text_align: left;
   --table_body_text_align: left;
   --table_body_color: #fff;
+  --table_body_height_row: 24px;
 }
 
 
@@ -41,6 +42,7 @@
 .table__tr{
   display: flex;
   margin-top: var(--outline--cell-size);
+  height: var(--table_body_height_row);
 
 }
 .table__th{

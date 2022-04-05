@@ -14,5 +14,8 @@ export function generatorStyle(styleParams?:any, prefect:string=""){
     if (styleParams.color){
         style[`--${prefect}_color`] = styleParams.color;
     }
+    if (styleParams.height_row){
+        style[`--${prefect}_height_row`] = styleParams.height_row;
+    }
     return {style};
 }
