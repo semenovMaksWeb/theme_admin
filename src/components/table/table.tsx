@@ -40,13 +40,17 @@ export function Table(props:any){
 
     return(
         <>
-            <div className="table components" data-id={table.id} style={components_style} >
-                <Header id={props.id}  />
-                <Body id={props.id}/>
-                <div className="paginator__table">
-                    {paginator}
-                </div>
+            <div className="table__wrapper">
+                <div className="table__name"> {table.name} </div>
+                <div className="table components" data-id={table.id} style={components_style} >
 
+                    <Header id={props.id}  />
+                    <Body id={props.id}/>
+                    <div className="paginator__table">
+                        {paginator}
+                    </div>
+
+                </div>
             </div>
         </>
     )

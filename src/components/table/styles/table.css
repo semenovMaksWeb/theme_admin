@@ -85,3 +85,6 @@
 }
 /* багофикс css outline */
 
+.table__name{
+  margin-bottom: 5px;
+}
