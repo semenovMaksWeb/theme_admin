@@ -1,0 +1,9 @@
+.breadcrumbs__wrapper{}
+.breadcrumbs__elem{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #8a8a8a;
+}
+.breadcrumbs__link{
+    cursor: pointer;
+}

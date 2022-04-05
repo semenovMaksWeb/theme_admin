@@ -7,6 +7,7 @@ import React from "react";
  */
 export function componentsStyle(elem:any){
     const components_style = {
+        '--component-height':elem?.style?.height ? elem.style.height: "auto",
         '--component-max_height':elem?.style?.max_height ? elem.style.max_height: "auto",
         '--component-width':elem?.style?.width ? elem.style.width: "auto",
         '--component-order': elem?.style?.order ? elem.style.order: 0,

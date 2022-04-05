@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import {TypeComponents} from "../../interface/type/typeComponents";
 import {Table} from "../table/table";
 import {Button} from "../button/button";

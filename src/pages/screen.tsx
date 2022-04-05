@@ -3,6 +3,7 @@ import {useActions} from "../hook/use-actions";
 import {useTypeSelector} from "../hook/use-typed-selector";
 import {slot} from "../components/slot/slot";
 import {useParams,} from 'react-router';
+import {Header} from "../components/header/header";
 
 
 export function Page_screen(){
@@ -15,6 +16,7 @@ export function Page_screen(){
     const {screen} = slot(components);
     return(
         <>
+            <Header/>
             {screen}
         </>
     )

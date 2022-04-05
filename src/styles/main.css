@@ -6,6 +6,7 @@
     --component-border: inherit;
     --component-border-radius: inherit;
     --component-max_height: auto;
+    --component-height: auto;
     --component-width: auto;
 }
 
@@ -26,4 +27,5 @@
     background: var(--component-bg);
     border: var(--component-border);
     border-radius: var(--component-border-radius);
+    height: var(    --component-height);
 }

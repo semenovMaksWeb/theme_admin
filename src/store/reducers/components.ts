@@ -1,5 +1,4 @@
 import {ComponentsAction, ComponentsReducers, ComponentsState, ComponentsTypes} from "../type/components";
-import {AlertTypes} from "../type/alert";
 
 export const ComponentsReducer = (state = ComponentsState, action: ComponentsAction): ComponentsReducers => {
     switch (action.type) {

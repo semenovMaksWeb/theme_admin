@@ -1,4 +1,4 @@
-import React, {useEffect, useState,} from "react";
+import React, {useEffect, useMemo, useState,} from "react";
 import "./styles/table.css"
 import {useTypeSelector} from "../../hook/use-typed-selector";
 import {CreateContent} from "./lib/create-dom/create-content";
@@ -21,7 +21,12 @@ export function Table(props:any){
     /**
      * #TODO CreateContent отрабатывает при каждом скролле критично!
      */
-    const  {body, header} = CreateContent(table);
+    // const {header, body} = useMemo(()=>{
+        console.log('CreateContent')
+        const  {body, header} = CreateContent(table);
+        // return {body, header}
+    // }, [table.data, table.paginator.page, table.sort_rule])
+    console.log(body, header)
     useEffect(()=>{
         if (table && table.data){
             CreateCheckboxData(table.id);
