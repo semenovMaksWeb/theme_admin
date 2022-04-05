@@ -7,7 +7,6 @@ export const id_1 = {
         hidden_text_overflow: true,
     },
     style:{
-        width: "700px",
         max_height: "300px",
         order: 1,
         margin: "0px 0px 10px 0px",
