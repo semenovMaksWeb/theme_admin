@@ -2,13 +2,18 @@
      id:7,
      screen_visible:false,
      style:{
-         border: "1px solid #000",
-         border_radius: "4px",
+         // border: "1px solid #000",
+         // border_radius: "4px",
          margin: "0 auto",
-         color: "#000"
+         // color: "#000",
+         height: "100%"
      },
      type: "button",
-     text: "редактировать",
+     // text: "редактировать",/
+     icons:{
+         type:"svg",
+         url: "editor.svg"
+     },
      title: "редактировать тему",
       event:{
           click:[

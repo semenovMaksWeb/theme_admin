@@ -17,6 +17,7 @@ export const id_1 = {
         body:{
             color: 'green',
             text_align: 'center',
+            height_row: "20px",
         },
     },
     paginator:{
@@ -55,16 +56,16 @@ export const id_1 = {
             sort:true,
         },
         delete:{
-            w:80,
+            w:40,
             key: "delete",
-            title: "удалить",
+            title: "",
             type: "button",
             button:2,
         },
         update:{
-            w:120,
+            w:40,
             key: "update",
-            title: "изменить",
+            title: "",
             type: "button",
             button:7,
         }

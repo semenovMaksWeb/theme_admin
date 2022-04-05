@@ -4,11 +4,12 @@ import { useHistory } from 'react-router-dom'
 import "./button.css"
 import {Callback} from "../../servers/callback";
 import {componentsStyle} from "../../servers/css/components_style";
+import {Svg} from "../svg/svg";
 export function Button(props:any){
     const history = useHistory();
     const  components = useTypeSelector(state => state.components.components);
+    // кнопка пропсом или глобальной cms
     const button = useMemo(()=>{
-        console.log('button')
         let button:any;
         if (!props.elem){
             button = components[props.id];
@@ -17,7 +18,17 @@ export function Button(props:any){
         }
         return button;
     }, [props.elem, components[props.id]])
-
+    // проверка нужно ли рисовать в кнопке иконку
+    const icons = useMemo(()=>{
+        let icons:JSX.Element = <></>;
+        if (button?.icons?.type === "svg"){
+            icons = <Svg url={button.icons.url}/>
+        }
+        if (button?.icons?.type === "image"){
+            icons =  <img src={button.icons.url} alt={button.icons.url} />
+        }
+        return icons;
+    },[button])
 
     if (!button){
         return  (<><div>кнопка не иницилизирована!</div> </>)
@@ -36,6 +47,7 @@ export function Button(props:any){
                 style={components_style}
             >
                 {button.text}
+                {icons}
             </button>
         </>
     )
