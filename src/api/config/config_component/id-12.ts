@@ -20,7 +20,7 @@ export const id_12 = {
                     params:{
                         url:{ url: "var_css_name/delete_in", type: TypeApiMethods.delete },
                          config:{
-                             ids: {
+                             id: {
                                  result: "body",
                                   type:3,
                                   id:9,
@@ -37,7 +37,7 @@ export const id_12 = {
                           id: {
                               result: "all",
                               type:3,
-                              id:1,
+                              id:9,
                               name: 'checkbox_data'
                           }
                       }
