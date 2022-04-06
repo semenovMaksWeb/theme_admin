@@ -95,7 +95,7 @@ export const id_15 = {
                                                   },
                                                   id: {
                                                        result: "params",
-                                                       type:15,
+                                                       type:4,
                                                        name: 'id_var_css',
                                                        var_type: 'number',
                                                   }
