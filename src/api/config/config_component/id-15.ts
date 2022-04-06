@@ -5,29 +5,29 @@ export const id_15 = {
      style:{
        order: 5,
      },
-     // api_data: {
-          // нету api
-          // url:{ 
-          //      // url: "theme/get_id", type: TypeApiMethods.get,
-          //      errors:{
-          //           callback:[{
-          //                name: "router_push",
-          //                params:{
-          //                     url: "/screen/3",
-          //                     config:{}
-          //                }
-          //           }]
-          //      }, },
-          // config:{
-          //      id: {
-          //           result: "params",
-          //           type:4,
-          //           name: 'id_var_css',
-          //           var_type: 'number',
-          //      },
-          // },
+     api_data: {
+          url:{
+               url: "var_css_name/get_id", type: TypeApiMethods.get,
+               errors:{
+                    callback:[{
+                         name: "router_push",
+                         params:{
+                              url: "/screen/3",
+                              config:{}
+                         }
+                    }]
+               },
+          },
+          config:{
+               id: {
+                    result: "params",
+                    type:4,
+                    name: 'id_var_css',
+                    var_type: 'number',
+               },
+          },
 
-     // },
+     },
      type: "form",
      screen_visible:false,
      name: "",

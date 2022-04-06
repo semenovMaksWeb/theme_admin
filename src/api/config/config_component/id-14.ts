@@ -82,7 +82,7 @@ export const id_14 = {
                                    {
                                         name: "api",
                                         params:{
-                                             url:{ url: "theme/get_id", type: TypeApiMethods.get},
+                                             url:{ url: "var_css_name/get_id", type: TypeApiMethods.get},
                                              config: {
                                                   id: {
                                                        result: "params",
