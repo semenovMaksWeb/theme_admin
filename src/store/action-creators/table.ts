@@ -4,17 +4,23 @@ import {ComponentsTypes} from "../type/components";
 import {TableCheckboxData} from "../../interface/tableCheckboxData";
 import {generatorUrlApi} from "../../api/generatorUrlApi";
 import {frontData} from "../../servers/front_data";
+import {errorsBack} from "../../servers/callback/errors-back";
+import {useHistory} from "react-router";
 
 /**
  * @function DataSaveTable
  * функция store
  * получается данные по api + парсит их + сохраняет в store для отображения
  */
-export function DataSaveTable(id:number){
+export function DataSaveTable(id:number, history:any){
     return async (dispatch: Dispatch<TableAction>, getStore:any) => {
         const api_url = getStore().components.components[id].api_url;
         const {body, params } = frontData(api_url.config, {});
         const response = await generatorUrlApi(api_url, params, body);
+        if (response?.status !== 200){
+            await errorsBack(api_url.errors, response?.data?.errors, history);
+            return;
+        }
         if (response?.data){
             const  data = response?.data.map((e:any, index:number)=>
                 {
