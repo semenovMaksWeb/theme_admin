@@ -67,6 +67,13 @@ export const id_1 = {
             title: "",
             type: "button",
             button:7,
+        },
+        update_var:{
+            w:40,
+            key: "update_var",
+            title: "",
+            type: "button",
+            button:19,
         }
     }
 }

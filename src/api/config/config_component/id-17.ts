@@ -26,7 +26,16 @@ export const id_17 = {
     type: "table",
     key_main: 'id',
     name: "Темы проектов",
-    api_url:{ 
+    api_url:{
+        errors:{
+            callback:[{
+                name: "router_push",
+                params:{
+                    url: "/screen/1",
+                    config:{}
+                }
+            }]
+        },
         url: "var_css_name_theme/theme_id", type: TypeApiMethods.get, config: {
             id: {
                result: "params",
