@@ -12,4 +12,5 @@ export enum CallbackName{
     reset_values_form="reset_values_form",
     add_table_row="add_table_row",
     router_push="router_push",
+    update_manual="update_manual",
 }

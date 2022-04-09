@@ -5,6 +5,7 @@ import {reset_values_form} from "./reset_values_form";
 import {add_table_row} from "./add_table_row";
 import {router_push} from "./router_push";
 import {errorsBack} from "./errors-back";
+import {update_manual} from "./update_manual";
 
 export async function Callback(event:any, configCallback:ConfigCallback[], content:any={}, history?:any){
     if (event){
@@ -40,6 +41,9 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
         }
         if (config.name === CallbackName.router_push) {
             router_push(config, content, history);
+        }
+        if (config.name === CallbackName.update_manual){
+            await update_manual(config);
         }
     }
 }
