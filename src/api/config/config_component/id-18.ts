@@ -6,13 +6,14 @@ export const id_18 = {
         order: 2
       },
       type: "form",
-      screen_visible:true,
+      screen_visible:false,
       values:{
         id: 0,
         name:"",
         value:"",
       },
       errors:{},
+      manual: {},
       schema:[
           {
             order: 1,
@@ -23,9 +24,27 @@ export const id_18 = {
             }, 
             children:[
                 {
+                    api_data: {
+                        url:{
+                            url: "var_css_name_theme/get_insert", type: TypeApiMethods.get,
+                        },
+                        config:{
+                            id: {
+                                result: "params",
+                                type:4,
+                                name: 'id_theme',
+                                var_type: 'number',
+                            },
+                        },
+
+                    },
                     order: 1,
                     id: "id",
-                    type: "input",
+                    schema: {
+                        id: "id",
+                        name: 'name'
+                    },
+                    type: "select",
                     label: {
                          text: "Новая переменная"
                     }
