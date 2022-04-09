@@ -36,7 +36,6 @@ export const id_18 = {
                                 var_type: 'number',
                             },
                         },
-
                     },
                     order: 1,
                     id: "id",
@@ -80,6 +79,28 @@ export const id_18 = {
                                         var_type: 'number',
                                     }
                                 }
+                            }
+                        },
+                        {
+                            name: "update_manual",
+                            params: {
+                                id_form: 18,
+                                id_select: "id",
+                                schema: {
+                                    id: "id",
+                                    name: 'name'
+                                },
+                                url:{
+                                    url: "var_css_name_theme/get_insert", type: TypeApiMethods.get,
+                                },
+                                config:{
+                                    id: {
+                                        result: "params",
+                                        type:4,
+                                        name: 'id_theme',
+                                        var_type: 'number',
+                                    },
+                                },
                             }
                         }
                     ]
@@ -138,8 +159,7 @@ export const id_18 = {
                 ]
             }
        },
-
-            ] 
+       ]
           }
       ]
 
