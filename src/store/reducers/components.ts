@@ -73,7 +73,20 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
-
+        case ComponentsTypes.SAVE_MANUAL_FORM:
+            return  {
+                ...state,
+                components: {
+                    ...state.components,
+                    [action.payload.id]:{
+                        ...state.components[action.payload.id],
+                        manual:{
+                            ...state.components[action.payload.id].manual,
+                            [action.payload.id_manual]: action.payload.data
+                        }
+                    }
+                }
+            }
 
             // изменить sort_rule
         case ComponentsTypes.UPDATE_SORT_RULE:

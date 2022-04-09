@@ -16,6 +16,17 @@ export enum ComponentsTypes {
     DELETE_CHECKBOX_COMPONENT="DELETE_CHECKBOX_COMPONENT",
     UPDATE_SORT_RULE = "UPDATE_SORT_RULE",
     PAGINATOR_SAVE = "PAGINATOR_SAVE",
+    SAVE_MANUAL_FORM="SAVE_MANUAL_FORM",
+}
+
+
+export interface SaveManualForm{
+    type: ComponentsTypes.SAVE_MANUAL_FORM,
+    payload: {
+        data: any,
+        id: number,
+        id_manual: number
+    },
 }
 
 export interface PaginatorSave{
@@ -64,7 +75,7 @@ export interface CreateComponents{
 
 export type ComponentsAction =
     DeleteCheckboxTable | PaginatorSave| UpdateSortRule | CreateComponent | CreateCheckboxData | ResetComponents
-    | CreateDataComponents | CreateComponents | UpdateValuesForm | SaveValuesForm | SaveErrorForm | ResetKeyErrorsForm;
+    | CreateDataComponents | CreateComponents | UpdateValuesForm | SaveValuesForm | SaveErrorForm | ResetKeyErrorsForm | SaveManualForm;
 
 export interface ComponentsReducers {
     components: any
