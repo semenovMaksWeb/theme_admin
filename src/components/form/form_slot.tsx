@@ -3,6 +3,7 @@ import {Fieldset} from "./components/fieldset/fieldset";
 import {Wrapper} from "./components/wrapper/wrapper";
 import {Input} from "./components/input/input";
 import {Button} from "../button/button";
+import {Select} from "./components/select/select";
 
 export function FormSlot(props: any, check_wrapper = false){
     const  elem = useMemo(()=>{
@@ -23,6 +24,9 @@ export function FormSlot(props: any, check_wrapper = false){
             if (e.type === "input"){
                 elem.push(<Input key={e.id} elem={e} id_form={props.id_form} />);
                 continue;
+            }
+            if (e.type === "select"){
+                elem.push(<Select key={e.id} elem={e} id_form={props.id_form} />)
             }
 
         }

@@ -1,0 +1,58 @@
+.select{
+    --select-width: 100px;
+    --select-height: 12px;
+
+    --select-height-menu: 100px;
+    --select-bg-menu: #fff;
+
+    --select_input-padding: 2px;
+    --select_input-fz: 9px;
+    --select_input-color: #adadad;
+    --select_input-border: 1px solid #000;
+
+    --select-option-border: 1px solid #000;
+    --select-option_color: #807e7e;
+    --select-option_padding: 0 2px;
+    --select-option_fz: 12px;
+
+    --select-option-hover_bg: #d4d1d1;
+    --select-option-hover_color: #000000;
+
+    position: relative;
+    display: flex;
+
+    width: var(--select-width);
+    height: var(--select-height);
+}
+
+.select__wrapper-option{
+    z-index: 10;
+    height: var(--select-height-menu);
+    background-color: var(--select-bg-menu);
+    position: absolute;
+    overflow: auto;
+    width: 100%;
+    top: 100%;
+}
+.select__input{
+    width: 100%;
+    font-size: var(--select_input-fz);
+    border: var(--select_input-border);
+    color: var(--select_input-color);
+    padding: var(--select_input-padding);
+}
+.select__option{
+    padding: var(--select-option_padding);
+    border: var(--select-option-border);
+    color: var(--select-option_color);
+    font-size: var(--select-option_fz);
+    cursor: pointer;
+}
+.select__option:hover{
+    background-color: var(--select-option-hover_bg);
+    color: var(--select-option-hover_color);
+}
+.select__option:focus{
+    background-color: var(--select-option-hover_bg);
+    color: var(--select-option-hover_color);
+}

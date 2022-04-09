@@ -18,7 +18,7 @@ export function Input(props:any){
 
     const updateData=(event:any)=>{
         UpdateValuesForm(props.id_form, props.elem.id, event.target.value)
-    }
+    };
     return(
         <>
             <input value={form.values[props.elem.id]} onChange={updateData} type="text" className={className}/>
