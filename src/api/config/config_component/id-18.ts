@@ -210,19 +210,12 @@ export const id_18 = {
                         params:{
                             url:{ url: "var_css_name_theme/update_all", type: TypeApiMethods.put},
                             config:{
-                                id: {
-                                    result: "body",
-                                    type:2,
-                                    id:18,
-                                    name: 'name',
-                                    var_type: "number",
-                               },
-                               value: {
+                                data: {
                                     result: "body",
                                     type: 2,
-                                    id:18,
-                                    name: 'value',
-                                }
+                                    id: 18,
+                                    name: 'rows_var_theme',
+                                },
                             }
                         }
                     }
