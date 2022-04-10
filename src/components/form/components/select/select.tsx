@@ -4,6 +4,7 @@ import {dataLoader} from "./lib/data-loader";
 import {useTypeSelector} from "../../../../hook/use-typed-selector";
 import {Option} from "./option/option";
 import {useActions} from "../../../../hook/use-actions";
+import {formValueCheck} from "../../lib/valueCheck";
 
 export function Select(props:any) {
     const  components = useTypeSelector(state => state.components.components);
@@ -51,7 +52,11 @@ export function Select(props:any) {
         UpdateValuesForm(props.id_form, props.elem.id, event.target.value)
     };
     const value = useMemo(()=>{
-        return form.values[props.elem.id] ? form.values[props.elem.id].name : ""
+        const res = formValueCheck(props, form);
+        if (res.name){
+            return res.name;
+        }
+        return  "";
     }, [form.values[props.elem.id]]);
     // onBlur={blurSelect}
     return <>

@@ -9,8 +9,6 @@ export const id_18 = {
       screen_visible:false,
       values:{
         id: 0,
-        name:"1",
-        value:"1",
         rows_var_theme:[],
       },
       errors:{},
@@ -155,6 +153,7 @@ export const id_18 = {
                     children: [
                         {
                             order: 1,
+                            id_parent: 'rows_var_theme',
                             id: "name",
                             type: "input",
                             label: {
@@ -163,6 +162,7 @@ export const id_18 = {
                         },
                         {
                             order: 2,
+                            id_parent: 'rows_var_theme',
                             id: "value",
                             type: "input",
                             label: {

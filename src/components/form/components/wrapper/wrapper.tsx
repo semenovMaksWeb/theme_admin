@@ -4,7 +4,7 @@ import {FormSlot} from "../../form_slot";
 import  "./wrapper.css"
 import {ErrorsText} from "../errors_text/errors_text";
 export function Wrapper(props:any){
-    const { elem } = FormSlot({elem:[props.elem], id_form:  props.id_form  }, true);
+    const { elem } = FormSlot({elem:[props.elem], id_form:  props.id_form  }, true, props.index);
     return(
         <>
             <div  className="form__wrapper_container">
