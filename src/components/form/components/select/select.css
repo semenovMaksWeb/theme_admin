@@ -1,8 +1,8 @@
 .select{
     --select-width: 100px;
-    --select-height: 12px;
+    --select-height: 19px;
 
-    --select-height-menu: 100px;
+    --select-height-max-menu: 100px;
     --select-bg-menu: #fff;
 
     --select_input-padding: 2px;
@@ -27,7 +27,7 @@
 
 .select__wrapper-option{
     z-index: 10;
-    height: var(--select-height-menu);
+    max-height: var(--select-height-max-menu);
     background-color: var(--select-bg-menu);
     position: absolute;
     overflow: auto;

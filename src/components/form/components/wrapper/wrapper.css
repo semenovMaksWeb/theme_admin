@@ -6,6 +6,7 @@
 .form__wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .form__wrapper_container{
     margin: var(--form__wrapper-margin);

@@ -1,0 +1,10 @@
+.form__container{
+    --form__container_display: "block";
+    --form__container_align-items: "flex-start";
+    display: var(--form__container_display);
+    align-items: var(--form__container_align-items);
+    margin: var(--form__wrapper-margin);
+}
+.form__container .form__wrapper_container{
+    margin: 0;
+}

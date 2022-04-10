@@ -44,73 +44,15 @@ export const id_18 = {
             }, 
             children:[
                 {
-                    api_data: {
-                        url:{
-                            url: "var_css_name_theme/get_insert", type: TypeApiMethods.get,
-                        },
-                        config:{
-                            id: {
-                                result: "params",
-                                type:4,
-                                name: 'id_theme',
-                                var_type: 'number',
-                            },
-                        },
+                    id: "create_container",
+                    type: "container",
+                    style:{
+                      display: "flex",
+                      "align-items": "flex-end",
                     },
-                    order: 1,
-                    id: "id",
-                    schema: {
-                        id: "id",
-                        name: 'name'
-                    },
-                    loader_start: false,
-                    type: "select",
-                    label: {
-                         text: "Новая переменная"
-                    }
-               },
-               {
-                order: 2,
-                key: "create",
-                id: 'create',
-                type: "button",
-                text: "создать",
-                style:{
-                     border: "1px solid #000",
-                     border_radius: "4px",
-                },
-                event:{
-                    click:[
+                    children:[
                         {
-                            name: "api",
-                            params:{
-                                url:{ url: "var_css_name_theme/save", type: TypeApiMethods.post},
-                                config:{
-                                    id_var: {
-                                        result: "body",
-                                        type:2,
-                                        id:18,
-                                        name: 'id',
-                                        val_type: "number",
-                                   },
-                                   id_theme: {
-                                        result: "body",
-                                        type: 4,
-                                        name: 'id_theme',
-                                        var_type: 'number',
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            name: "update_manual",
-                            params: {
-                                id_form: 18,
-                                id_select: "id",
-                                schema: {
-                                    id: "id",
-                                    name: 'name'
-                                },
+                            api_data: {
                                 url:{
                                     url: "var_css_name_theme/get_insert", type: TypeApiMethods.get,
                                 },
@@ -122,18 +64,88 @@ export const id_18 = {
                                         var_type: 'number',
                                     },
                                 },
+                            },
+                            order: 1,
+                            id: "id",
+                            schema: {
+                                id: "id",
+                                name: 'name'
+                            },
+                            loader_start: false,
+                            type: "select",
+                            label: {
+                                text: "Новая переменная"
                             }
                         },
                         {
-                            name: "reset_value_form_key",
-                            params:{
-                                id: 18,
-                                key: "id",
+                            order: 2,
+                            key: "create",
+                            id: 'create',
+                            type: "button",
+                            text: "создать",
+                            style:{
+                                border: "1px solid #000",
+                                border_radius: "4px",
+                                height: "20px",
+                                margin: "0 0 0 10px"
+                            },
+                            event:{
+                                click:[
+                                    {
+                                        name: "api",
+                                        params:{
+                                            url:{ url: "var_css_name_theme/save", type: TypeApiMethods.post},
+                                            config:{
+                                                id_var: {
+                                                    result: "body",
+                                                    type:2,
+                                                    id:18,
+                                                    name: 'id',
+                                                    val_type: "number",
+                                                },
+                                                id_theme: {
+                                                    result: "body",
+                                                    type: 4,
+                                                    name: 'id_theme',
+                                                    var_type: 'number',
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        name: "update_manual",
+                                        params: {
+                                            id_form: 18,
+                                            id_select: "id",
+                                            schema: {
+                                                id: "id",
+                                                name: 'name'
+                                            },
+                                            url:{
+                                                url: "var_css_name_theme/get_insert", type: TypeApiMethods.get,
+                                            },
+                                            config:{
+                                                id: {
+                                                    result: "params",
+                                                    type:4,
+                                                    name: 'id_theme',
+                                                    var_type: 'number',
+                                                },
+                                            },
+                                        }
+                                    },
+                                    {
+                                        name: "reset_value_form_key",
+                                        params:{
+                                            id: 18,
+                                            key: "id",
+                                        }
+                                    }
+                                ]
                             }
-                        }
+                        },
                     ]
-                }
-           },
+                },
                 {
                     order: 3,
                     id: "name",
