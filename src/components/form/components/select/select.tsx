@@ -15,10 +15,15 @@ export function Select(props:any) {
     const [visible, visibleSave] = useState(false);
     useEffect( ()=>{
         (async ()=>{
+            if(props.elem.loader_start){
             await dataLoader(props.elem, props.id_form);
+            }
         })();
     },[props.elem]);
-    const focusSelect = ()=>{
+    const focusSelect = async ()=>{
+        if (!form.manual[props.elem.id]){
+            await dataLoader(props.elem, props.id_form);
+        }
         visibleSave(true);
     };
     const arrayOption = useMemo(()=>{

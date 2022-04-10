@@ -2,6 +2,26 @@ import { TypeApiMethods } from "interface/type/typeApi";
 
 export const id_18 = {
     id:18,
+    api_data: {
+        config: {
+            id: {
+                result: "params",
+                type: 4,
+                name: 'id_theme',
+                var_type: 'number',
+            }
+        },
+        url:{  url: "var_css_name_theme/theme_id", type: TypeApiMethods.get,
+            errors:{
+                callback:[{
+                    name: "router_push",
+                    params:{
+                        url: "/screen/1",
+                        config:{}
+                    }
+                }]
+            }, },
+    },
     style:{
         order: 2
       },
@@ -43,6 +63,7 @@ export const id_18 = {
                         id: "id",
                         name: 'name'
                     },
+                    loader_start: false,
                     type: "select",
                     label: {
                          text: "Новая переменная"
