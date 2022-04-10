@@ -15,6 +15,7 @@ export function Form(props:any){
     const form:any = components[props.id];
     const {elem} = FormSlot({elem: form.schema, id_form:props.id});
     const {components_style} = componentsStyle(form);
+    console.log(form);
     useEffect(() => {
         (async ()=>{
             if (form && form.api_data){

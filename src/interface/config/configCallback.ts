@@ -13,5 +13,6 @@ export enum CallbackName{
     add_table_row="add_table_row",
     router_push="router_push",
     update_manual="update_manual",
-    reset_value_form_key="reset_value_form_key"
+    reset_value_form_key="reset_value_form_key",
+    add_rows_values_form="add_rows_values_form",
 }

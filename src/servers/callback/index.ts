@@ -1,11 +1,12 @@
 import {CallbackName, ConfigCallback} from "../../interface/config/configCallback";
 import {callbackApi} from "./api";
-import {CallbackDeleteTableRow} from "./delete_table_row";
-import {reset_value_form_key, reset_values_form} from "./reset_values_form";
-import {add_table_row} from "./add_table_row";
+import {CallbackDeleteTableRow} from "./table/delete_table_row";
+import {reset_value_form_key, reset_values_form} from "./form/reset_values_form";
+import {add_table_row} from "./table/add_table_row";
 import {router_push} from "./router_push";
 import {errorsBack} from "./errors-back";
-import {update_manual} from "./update_manual";
+import {update_manual} from "./form/update_manual";
+import {add_rows_values_form} from "./form/add_rows_values_form";
 
 export async function Callback(event:any, configCallback:ConfigCallback[], content:any={}, history?:any){
     if (event){
@@ -47,6 +48,9 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
         }
         if (config.name === CallbackName.update_manual){
             await update_manual(config);
+        }
+        if (config.name === CallbackName.add_rows_values_form){
+            add_rows_values_form(config);
         }
     }
 }

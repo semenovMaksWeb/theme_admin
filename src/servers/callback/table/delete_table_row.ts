@@ -1,7 +1,7 @@
-import {ConfigCallback} from "../../interface/config/configCallback";
-import {frontData} from "../front_data";
-import {store} from "../../store"
-import {ComponentsTypes} from "../../store/type/components";
+import {ConfigCallback} from "../../../interface/config/configCallback";
+import {frontData} from "../../front_data";
+import {store} from "../../../store"
+import {ComponentsTypes} from "../../../store/type/components";
 
 /**
  * @function CallbackDeleteTableRow

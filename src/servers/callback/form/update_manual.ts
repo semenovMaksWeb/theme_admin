@@ -1,8 +1,8 @@
-import {ConfigCallback} from "../../interface/config/configCallback";
-import  {store} from "../../store";
-import {frontData} from "../front_data";
-import {generatorUrlApi} from "../../api/generatorUrlApi";
-import {dataSaveSelect} from "../../components/form/components/select/lib/data-loader";
+import {ConfigCallback} from "../../../interface/config/configCallback";
+import  {store} from "../../../store";
+import {frontData} from "../../front_data";
+import {generatorUrlApi} from "../../../api/generatorUrlApi";
+import {dataSaveSelect} from "../../../components/form/components/select/lib/data-loader";
 /**
  * @function router_push
  * функция калбек

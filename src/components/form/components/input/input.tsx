@@ -21,13 +21,14 @@ export function Input(props:any){
     const updateData=(event:any)=>{
         if (props.elem.id_parent){
             UpdateValuesRowsForm(props.id_form, props.elem.id_parent, props.index, props.elem.id, event.target.value);
-            return;
+        }else {
+            UpdateValuesForm(props.id_form, props.elem.id, event.target.value)
         }
-        UpdateValuesForm(props.id_form, props.elem.id, event.target.value)
+
     };
     const value = useMemo(()=>{
        return formValueCheck(props, form);
-    }, [form.values[props.elem.id]] );
+    }, [form.values[props.elem.id], form.values[props.elem.id_parent][props.index][props.elem.id] ] );
     return(
         <>
             <input disabled={props.elem.disabled} value={value} onChange={updateData} type="text" className={className}/>

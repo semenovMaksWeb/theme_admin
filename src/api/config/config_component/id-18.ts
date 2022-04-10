@@ -82,6 +82,7 @@ export const id_18 = {
                                                     id:18,
                                                     name: 'id',
                                                     val_type: "number",
+                                                    check_id: true,
                                                 },
                                                 id_theme: {
                                                     result: "body",
@@ -91,6 +92,21 @@ export const id_18 = {
                                                 }
                                             }
                                         }
+                                    },
+                                    {
+                                      name: "add_rows_values_form",
+                                       params:{
+                                          id_form: 18,
+                                          values_key: "rows_var_theme",
+                                           front_data: {
+                                               data:{
+                                                   result: "all",
+                                                   type:2,
+                                                   id:18,
+                                                   name: 'id',
+                                               }
+                                           },
+                                       }
                                     },
                                     {
                                         name: "update_manual",

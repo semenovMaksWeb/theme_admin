@@ -25,6 +25,7 @@ export function Rows(props:any) {
     }, [props.elem])
 
     const rows_html = useMemo(() => {
+        console.log('rows_html', props.elem.id );
         const rows_html:any = [];
         let index = -1;
         for(const rows of form.values[props.elem.id]){
@@ -33,7 +34,7 @@ export function Rows(props:any) {
             rows_html.push(elem);
         }
         return rows_html;
-    }, [form.values[props.elem.id]]);
+    }, [form.values[props.elem.id]] );
 
 
 

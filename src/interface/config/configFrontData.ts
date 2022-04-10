@@ -10,7 +10,8 @@ export interface FrontData{
     name: string;
     result:ResultFrontData;
     index?: number;
-    var_type: ValType
+    var_type: ValType,
+    check_id?: boolean;
 }
 export enum ResultFrontData{
     body="body",

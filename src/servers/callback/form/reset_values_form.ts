@@ -1,5 +1,5 @@
-import {store} from "../../store"
-import {ComponentsTypes} from "../../store/type/components";
+import {store} from "../../../store"
+import {ComponentsTypes} from "../../../store/type/components";
 
 /**
  * @function reset_values_form

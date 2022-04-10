@@ -42,9 +42,9 @@ export function UpdateValuesRowsForm(id:number, key_parent:string, index:number,
         dispatch({
             type: ComponentsTypes.UPDATE_VALUES_FORM,
             payload:{
-                key:key,
+                key:key_parent,
                 id: id,
-                value: value,
+                value: values,
             }
         })
     }
