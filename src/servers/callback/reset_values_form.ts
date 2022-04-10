@@ -15,3 +15,15 @@ export function reset_values_form(id:number){
     store.dispatch({type: ComponentsTypes.SAVE_VALUES_FORM, payload:{ id: id, values: res }});
     store.dispatch({type: ComponentsTypes.SAVE_ERRORS_FORM, payload:{ id: id, errors: {} }});
 }
+
+
+/**
+ * @function reset_values_form
+ * функция калбек
+ * очищает форму от данных у определенного поля
+ */
+export function reset_value_form_key(id:number, key:string) {
+    const form:any = store.getState().components.components[id].values;
+    form[key] = "";
+    store.dispatch({type: ComponentsTypes.SAVE_VALUES_FORM, payload:{ id: id, values: form }});
+}

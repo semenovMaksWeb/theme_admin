@@ -1,7 +1,7 @@
 import {CallbackName, ConfigCallback} from "../../interface/config/configCallback";
 import {callbackApi} from "./api";
 import {CallbackDeleteTableRow} from "./delete_table_row";
-import {reset_values_form} from "./reset_values_form";
+import {reset_value_form_key, reset_values_form} from "./reset_values_form";
 import {add_table_row} from "./add_table_row";
 import {router_push} from "./router_push";
 import {errorsBack} from "./errors-back";
@@ -35,6 +35,9 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
         }
         if (config.name === CallbackName.reset_values_form) {
             reset_values_form(config.params.id);
+        }
+        if (config.name === CallbackName.reset_value_form_key) {
+            reset_value_form_key(config.params.id, config.params.key);
         }
         if (config.name === CallbackName.add_table_row) {
             add_table_row(config, content);

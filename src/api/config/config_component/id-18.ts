@@ -102,6 +102,13 @@ export const id_18 = {
                                     },
                                 },
                             }
+                        },
+                        {
+                            name: "reset_value_form_key",
+                            params:{
+                                id: 18,
+                                key: "id",
+                            }
                         }
                     ]
                 }
