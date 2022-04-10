@@ -29,7 +29,7 @@ export function Input(props:any){
     }, [form.values[props.elem.id]] );
     return(
         <>
-            <input value={value} onChange={updateData} type="text" className={className}/>
+            <input disabled={props.elem.disabled} value={value} onChange={updateData} type="text" className={className}/>
         </>
 
         )

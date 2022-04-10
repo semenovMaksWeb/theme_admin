@@ -159,16 +159,17 @@ export const id_18 = {
                          type: "container",
                           order:1,
                           children:[
+                              // {
+                              //     order: 1,
+                              //     id_parent: 'rows_var_theme',
+                              //     id: "id",
+                              //     type: "input",
+                              //     label: {
+                              //         text: "Id переменной"
+                              //     }
+                              // },
                               {
-                                  order: 1,
-                                  id_parent: 'rows_var_theme',
-                                  id: "id",
-                                  type: "input",
-                                  label: {
-                                      text: "Id переменной"
-                                  }
-                              },
-                              {
+                                  disabled: true,
                                   order: 2,
                                   id_parent: 'rows_var_theme',
                                   id: "name",
