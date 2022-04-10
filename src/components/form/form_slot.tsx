@@ -5,6 +5,7 @@ import {Input} from "./components/input/input";
 import {Button} from "../button/button";
 import {Select} from "./components/select/select";
 import {Container} from "./components/container/container";
+import {Rows} from "./components/rows/rows";
 
 export function FormSlot(props: any, check_wrapper = false){
     const  elem = useMemo(()=>{
@@ -19,7 +20,11 @@ export function FormSlot(props: any, check_wrapper = false){
                 continue;
             }
             if (e.type === "container"){
-                elem.push(<Container key={e.id} elem={e} id_form={props.id_form} />)
+                elem.push(<Container key={e.id} elem={e} id_form={props.id_form} />);
+                continue;
+            }
+            if (e.type === "rows"){
+                elem.push(<Rows key={e.id} elem={e} id_form={props.id_form} />);
                 continue;
             }
             if (!check_wrapper){
@@ -36,7 +41,7 @@ export function FormSlot(props: any, check_wrapper = false){
 
         }
         return elem;
-    }, [props.elem])
+    }, [props.elem]);
 
     return {elem}
 }

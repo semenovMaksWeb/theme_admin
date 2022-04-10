@@ -2,26 +2,6 @@ import { TypeApiMethods } from "interface/type/typeApi";
 
 export const id_18 = {
     id:18,
-    api_data: {
-        config: {
-            id: {
-                result: "params",
-                type: 4,
-                name: 'id_theme',
-                var_type: 'number',
-            }
-        },
-        url:{  url: "var_css_name_theme/theme_id", type: TypeApiMethods.get,
-            errors:{
-                callback:[{
-                    name: "router_push",
-                    params:{
-                        url: "/screen/1",
-                        config:{}
-                    }
-                }]
-            }, },
-    },
     style:{
         order: 2
       },
@@ -29,8 +9,9 @@ export const id_18 = {
       screen_visible:false,
       values:{
         id: 0,
-        name:"",
-        value:"",
+        name:"1",
+        value:"1",
+        rows_var_theme:[],
       },
       errors:{},
       manual: {},
@@ -45,6 +26,7 @@ export const id_18 = {
             children:[
                 {
                     id: "create_container",
+                    order: 1,
                     type: "container",
                     style:{
                       display: "flex",
@@ -147,22 +129,50 @@ export const id_18 = {
                     ]
                 },
                 {
-                    order: 3,
-                    id: "name",
-                    type: "input",
-                    label: {
-                         text: "Название переменной"
-                    }
-               },
-               {
-                order: 4,
-                id: "value",
-                type: "input",
-                label: {
-                     text: "Значение переменной"
-                }
-           },
-
+                    api_data: {
+                        config: {
+                            id: {
+                                result: "params",
+                                type: 4,
+                                name: 'id_theme',
+                                var_type: 'number',
+                            }
+                        },
+                        url:{  url: "var_css_name_theme/theme_id", type: TypeApiMethods.get,
+                            errors:{
+                                callback:[{
+                                    name: "router_push",
+                                    params:{
+                                        url: "/screen/1",
+                                        config:{}
+                                    }
+                                }]
+                            }, },
+                    },
+                    id: "rows_var_theme",
+                    order: 2,
+                    type: "rows",
+                    children: [
+                        {
+                            order: 1,
+                            id: "name",
+                            type: "input",
+                            label: {
+                                text: "Название переменной"
+                            }
+                        },
+                        {
+                            order: 2,
+                            id: "value",
+                            type: "input",
+                            label: {
+                                text: "Значение переменной"
+                            }
+                        },
+                    ]
+                },
+            ]
+          },
            {
             order: 5,
             key: "button_update",
@@ -198,9 +208,6 @@ export const id_18 = {
                     }
                 ]
             }
-       },
-       ]
-          }
-      ]
-
-}
+       }
+     ]
+};

@@ -14,14 +14,17 @@ export function Input(props:any){
             className += " errors"
         }
         return className;
-    }, [form.errors[props.elem.id]])
+    }, [form.errors[props.elem.id]]);
 
     const updateData=(event:any)=>{
         UpdateValuesForm(props.id_form, props.elem.id, event.target.value)
     };
+    const value = useMemo(()=>{
+        return form.values[props.elem.id] ? form.values[props.elem.id] : ""
+    }, [form.values[props.elem.id]]);
     return(
         <>
-            <input value={form.values[props.elem.id]} onChange={updateData} type="text" className={className}/>
+            <input value={value} onChange={updateData} type="text" className={className}/>
         </>
 
         )

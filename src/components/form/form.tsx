@@ -29,6 +29,7 @@ export function Form(props:any){
             }
         })();
     }, [form.id])
+    console.log(form);
     return (
         <form className="form components" data-id={props.id} style={components_style}>
             {elem}
