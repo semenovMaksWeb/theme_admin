@@ -28,3 +28,24 @@ export function UpdateValuesForm(id:number, key:string, value:any){
         })
     }
 }
+
+
+/**
+ * @function UpdateValuesForm
+ * функция store
+ * изменяет данные в форме + очищает ошибки при изменения ввода в компоненте rows
+ */
+export function UpdateValuesRowsForm(id:number, key_parent:string, index:number, key:string, value:any){
+    return (dispatch: Dispatch<ComponentsAction>, getStore:any) => {
+        const values =  getStore().components.components[id].values[key_parent];
+        values[index][key] = value;
+        dispatch({
+            type: ComponentsTypes.UPDATE_VALUES_FORM,
+            payload:{
+                key:key,
+                id: id,
+                value: value,
+            }
+        })
+    }
+}

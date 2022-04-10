@@ -150,6 +150,11 @@ export const id_18 = {
                     id: "rows_var_theme",
                     order: 2,
                     type: "rows",
+                    style:{
+                        overflow: "auto",
+                        'max-height': "300px",
+                        padding: "0 10px 0 0"
+                    },
                     children: [
                         {
                          style:{
@@ -174,6 +179,9 @@ export const id_18 = {
                                   id_parent: 'rows_var_theme',
                                   id: "name",
                                   type: "input",
+                                  style_wrapper:{
+                                        margin: "0 10px 0 0"
+                                  },
                                   label: {
                                       text: "Название переменной"
                                   }

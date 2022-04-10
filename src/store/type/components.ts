@@ -9,6 +9,7 @@ export enum ComponentsTypes {
     RESET_COMPONENT="RESET_COMPONENT",
     CREATE_DATA_COMPONENT="CREATE_DATA",
     UPDATE_VALUES_FORM="UPDATE_VALUES_FORM",
+    UPDATE_VALUES_ROWS_FORM="UPDATE_VALUES_ROWS_FORM",
     SAVE_VALUES_FORM="SAVE_VALUES_FORM",
     SAVE_ERRORS_FORM="SAVE_ERRORS_FORM",
     RESET_KEY_ERRORS_FORM="RESET_KEY_ERRORS_FORM",
@@ -19,6 +20,16 @@ export enum ComponentsTypes {
     SAVE_MANUAL_FORM="SAVE_MANUAL_FORM",
 }
 
+export interface UpdateValuesRowsForm {
+    type: ComponentsTypes.UPDATE_VALUES_ROWS_FORM,
+    payload: {
+        value: any,
+        key: string,
+        key_parent: string,
+        index:number,
+        id: number
+    },
+}
 
 export interface SaveManualForm{
     type: ComponentsTypes.SAVE_MANUAL_FORM,
@@ -74,7 +85,7 @@ export interface CreateComponents{
 
 
 export type ComponentsAction =
-    DeleteCheckboxTable | PaginatorSave| UpdateSortRule | CreateComponent | CreateCheckboxData | ResetComponents
+    UpdateValuesRowsForm | DeleteCheckboxTable | PaginatorSave| UpdateSortRule | CreateComponent | CreateCheckboxData | ResetComponents
     | CreateDataComponents | CreateComponents | UpdateValuesForm | SaveValuesForm | SaveErrorForm | ResetKeyErrorsForm | SaveManualForm;
 
 export interface ComponentsReducers {

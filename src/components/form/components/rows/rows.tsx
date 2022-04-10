@@ -1,10 +1,11 @@
-// import {useTypeSelector} from "../../../../hook/use-typed-selector";
-import {FormSlot, FormSlotValidJs} from "../../form_slot";
+import { FormSlotValidJs} from "../../form_slot";
 import React, {useEffect, useMemo} from "react";
 import {frontData} from "../../../../servers/front_data";
 import {generatorUrlApi} from "../../../../api/generatorUrlApi";
 import {useActions} from "../../../../hook/use-actions";
 import {useTypeSelector} from "../../../../hook/use-typed-selector";
+import {generatorStyleForm} from "../../../../servers/css/generatorStyleForm";
+import "./rows.css";
 export function Rows(props:any) {
     const {UpdateValuesForm} = useActions();
     const  components = useTypeSelector(state => state.components.components);
@@ -19,6 +20,10 @@ export function Rows(props:any) {
         })();
     }, [props.elem]);
 
+    const style = useMemo(()=>{
+        return generatorStyleForm(props.elem.style, 'form__rows')
+    }, [props.elem])
+
     const rows_html = useMemo(() => {
         const rows_html:any = [];
         let index = -1;
@@ -32,7 +37,7 @@ export function Rows(props:any) {
 
 
 
-    return (<div className="form__rows-container">
+    return (<div style={style} className="form__rows">
         {rows_html}
     </div>);
 }

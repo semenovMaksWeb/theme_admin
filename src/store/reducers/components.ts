@@ -38,6 +38,23 @@ export const ComponentsReducer = (state = ComponentsState, action: ComponentsAct
                     }
                 }
             }
+
+        // // изменить данные в форме в компоненте rows
+        // case ComponentsTypes.UPDATE_VALUES_ROWS_FORM:
+        //     return  {
+        //         ...state,
+        //         components: {
+        //             ...state.components,
+        //             [action.payload.id]:{
+        //                 ...state.components[action.payload.id],
+        //                 values:{
+        //                     ...state.components[action.payload.id].values,
+        //                     [action.payload.key_parent]: [...state.components[action.payload.id].values[action.payload.key_parent]]
+        //                     // [action.payload.key_parent]:
+        //                 }
+        //             }
+        //         }
+        //     };
         // заполнить данные checkbox
         case  ComponentsTypes.CREATE_CHECKBOX_COMPONENT:
             return {

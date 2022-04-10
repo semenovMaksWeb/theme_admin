@@ -4,10 +4,11 @@ import {useActions} from "../../../../hook/use-actions";
 import {addErrorsClass} from "../../lib/add-errors-class";
 import {formValueCheck} from "../../lib/valueCheck";
 
+
 export function Input(props:any){
     const  components = useTypeSelector(state => state.components.components);
     const form:any = components[props.id_form];
-    const {UpdateValuesForm} = useActions();
+    const {UpdateValuesForm, UpdateValuesRowsForm} = useActions();
     const  className = useMemo(()=>{
         let className = "form__input";
         let checkErrors = addErrorsClass(form, props.elem);
@@ -18,8 +19,8 @@ export function Input(props:any){
     }, [form.errors[props.elem.id]]);
 
     const updateData=(event:any)=>{
-        if (props.elem.id_parent && props.index){
-
+        if (props.elem.id_parent){
+            UpdateValuesRowsForm(props.id_form, props.elem.id_parent, props.index, props.elem.id, event.target.value);
             return;
         }
         UpdateValuesForm(props.id_form, props.elem.id, event.target.value)

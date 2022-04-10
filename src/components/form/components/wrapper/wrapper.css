@@ -1,5 +1,6 @@
 :root{
     --form__wrapper-margin: 0 0 10px 0;
+    --form_wrapper_margin: 0;
 }
 
 
@@ -7,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: var(--form_wrapper_margin);
 }
 .form__wrapper_container{
     margin: var(--form__wrapper-margin);

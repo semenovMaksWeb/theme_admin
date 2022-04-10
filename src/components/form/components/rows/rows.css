@@ -1,0 +1,8 @@
+.form__rows{
+    --form__rows_max-height: auto;
+    --form__rows_overflow:inherit;
+    --form__rows_padding: 0;
+    max-height: var(--form__rows_max-height);
+    overflow: var(--form__rows_overflow);
+    padding: var(--form__rows_padding);
+}
