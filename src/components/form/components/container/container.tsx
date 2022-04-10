@@ -3,7 +3,7 @@ import {FormSlot} from "../../form_slot";
 import  "./form_container.css"
 import {generatorStyleForm} from "../../../../servers/css/generatorStyleForm";
 export function Container(props:any) {
-    const { elem } = FormSlot({elem: props.elem.children, id_form:props.id_form});
+    const { elem } = FormSlot({elem: props.elem.children, id_form:props.id_form}, false, props.index);
     const style = useMemo(()=>{
         return generatorStyleForm(props.elem.style, 'form__container')
     }, [props.elem])

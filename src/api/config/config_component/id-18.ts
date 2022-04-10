@@ -152,23 +152,43 @@ export const id_18 = {
                     type: "rows",
                     children: [
                         {
-                            order: 1,
-                            id_parent: 'rows_var_theme',
-                            id: "name",
-                            type: "input",
-                            label: {
-                                text: "Название переменной"
-                            }
+                         style:{
+                             display: "flex"
+                         },
+                         id: 'container_var_theme',
+                         type: "container",
+                          order:1,
+                          children:[
+                              {
+                                  order: 1,
+                                  id_parent: 'rows_var_theme',
+                                  id: "id",
+                                  type: "input",
+                                  label: {
+                                      text: "Id переменной"
+                                  }
+                              },
+                              {
+                                  order: 2,
+                                  id_parent: 'rows_var_theme',
+                                  id: "name",
+                                  type: "input",
+                                  label: {
+                                      text: "Название переменной"
+                                  }
+                              },
+                              {
+                                  order: 3,
+                                  id_parent: 'rows_var_theme',
+                                  id: "value",
+                                  type: "input",
+                                  label: {
+                                      text: "Значение переменной"
+                                  }
+                              },
+                          ]
                         },
-                        {
-                            order: 2,
-                            id_parent: 'rows_var_theme',
-                            id: "value",
-                            type: "input",
-                            label: {
-                                text: "Значение переменной"
-                            }
-                        },
+
                     ]
                 },
             ]

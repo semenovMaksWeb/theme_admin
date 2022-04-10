@@ -20,7 +20,7 @@ export function FormSlotValidJs(props:any, check_wrapper = false, index?:number)
             continue;
         }
         if (e.type === "container"){
-            elem.push(<Container key={e.id} elem={e} id_form={props.id_form} />);
+            elem.push(<Container key={e.id} elem={e} id_form={props.id_form}  index={index}/>);
             continue;
         }
         if (e.type === "rows"){
