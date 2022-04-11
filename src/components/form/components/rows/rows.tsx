@@ -34,7 +34,7 @@ export function Rows(props:any) {
             rows_html.push(elem);
         }
         return rows_html;
-    }, [form.values[props.elem.id]] );
+    }, [form.values[props.elem.id],form.values[props.elem.id].length  ] );
 
 
 
