@@ -219,22 +219,14 @@ export const id_18 = {
                                           {
                                               name: "api",
                                               params:{
-                                                  url:{ url: "var_css_name_theme/save", type: TypeApiMethods.post},
+                                                  url:{ url: "var_css_name_theme/delete", type: TypeApiMethods.delete},
                                                   config:{
-                                                      id_var: {
-                                                          result: "body",
-                                                          type:2,
+                                                      id: {
+                                                          result: "params",
+                                                          type:1,
                                                           id:18,
                                                           name: 'id',
-                                                          val_type: "number",
-                                                          check_id: true,
                                                       },
-                                                      id_theme: {
-                                                          result: "body",
-                                                          type: 4,
-                                                          name: 'id_theme',
-                                                          var_type: 'number',
-                                                      }
                                                   }
                                               }
                                           },
