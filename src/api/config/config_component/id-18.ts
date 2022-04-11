@@ -180,18 +180,9 @@ export const id_18 = {
                          type: "container",
                           order:1,
                           children:[
-                              // {
-                              //     order: 1,
-                              //     id_parent: 'rows_var_theme',
-                              //     id: "id",
-                              //     type: "input",
-                              //     label: {
-                              //         text: "Id переменной"
-                              //     }
-                              // },
                               {
                                   disabled: true,
-                                  order: 2,
+                                  order: 1,
                                   id_parent: 'rows_var_theme',
                                   id: "name",
                                   type: "input",
@@ -203,12 +194,51 @@ export const id_18 = {
                                   }
                               },
                               {
-                                  order: 3,
+                                  order: 2,
                                   id_parent: 'rows_var_theme',
                                   id: "value",
                                   type: "input",
                                   label: {
                                       text: "Значение переменной"
+                                  }
+                              },
+                              {
+                                  order: 3,
+                                  key: "delete",
+                                  id: 'delete',
+                                  type: "button",
+                                  text: "удалить",
+                                  style:{
+                                      border: "1px solid #000",
+                                      border_radius: "4px",
+                                      height: "20px",
+                                      margin: "0 0 0 10px"
+                                  },
+                                  event:{
+                                      click:[
+                                          {
+                                              name: "api",
+                                              params:{
+                                                  url:{ url: "var_css_name_theme/save", type: TypeApiMethods.post},
+                                                  config:{
+                                                      id_var: {
+                                                          result: "body",
+                                                          type:2,
+                                                          id:18,
+                                                          name: 'id',
+                                                          val_type: "number",
+                                                          check_id: true,
+                                                      },
+                                                      id_theme: {
+                                                          result: "body",
+                                                          type: 4,
+                                                          name: 'id_theme',
+                                                          var_type: 'number',
+                                                      }
+                                                  }
+                                              }
+                                          },
+                                      ]
                                   }
                               },
                           ]

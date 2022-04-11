@@ -17,8 +17,9 @@ export function Button(props:any){
             button = props.elem;
         }
         return button;
-    }, [props.elem, components[props.id]])
+    }, [props.elem, components[props.id]]);
     // проверка нужно ли рисовать в кнопке иконку
+    console.log(props);
     const icons = useMemo(()=>{
         let icons:JSX.Element = <></>;
         if (button?.icons?.type === "svg"){

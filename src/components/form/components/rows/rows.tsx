@@ -22,7 +22,7 @@ export function Rows(props:any) {
 
     const style = useMemo(()=>{
         return generatorStyleForm(props.elem.style, 'form__rows')
-    }, [props.elem])
+    }, [props.elem]);
 
     const rows_html = useMemo(() => {
         console.log('rows_html', props.elem.id );
@@ -30,11 +30,11 @@ export function Rows(props:any) {
         let index = -1;
         for(const rows of form.values[props.elem.id]){
             index++;
-            const elem = FormSlotValidJs({elem: props.elem.children, id_form:  props.id_form }, false, index);
+            const elem = FormSlotValidJs({elem: props.elem.children, id_form:  props.id_form }, false, index, rows);
             rows_html.push(elem);
         }
         return rows_html;
-    }, [form.values[props.elem.id],form.values[props.elem.id].length  ] );
+    }, [form.values[props.elem.id], form.values[props.elem.id].length ] );
 
 
 

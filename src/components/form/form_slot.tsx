@@ -8,7 +8,7 @@ import {Container} from "./components/container/container";
 import {Rows} from "./components/rows/rows";
 
 
-export function FormSlotValidJs(props:any, check_wrapper = false, index?:number) {
+export function FormSlotValidJs(props:any, check_wrapper = false, index?:number, context?:any) {
     const elem:any  = [];
     for (const e of props.elem) {
         if (e.type === "fieldset"){
@@ -16,11 +16,11 @@ export function FormSlotValidJs(props:any, check_wrapper = false, index?:number)
             continue;
         }
         if (e.type === "button"){
-            elem.push(<Button key={e.id} elem={e} id_form={props.id_form} />);
+            elem.push(<Button key={e.id} elem={e} id_form={props.id_form}  context={context} />);
             continue;
         }
         if (e.type === "container"){
-            elem.push(<Container key={e.id} elem={e} id_form={props.id_form}  index={index}/>);
+            elem.push(<Container key={e.id} elem={e} id_form={props.id_form}  index={index} context={context} />);
             continue;
         }
         if (e.type === "rows"){
@@ -43,9 +43,9 @@ export function FormSlotValidJs(props:any, check_wrapper = false, index?:number)
 }
 
 
-export function FormSlot(props: any, check_wrapper = false, index?:number){
+export function FormSlot(props: any, check_wrapper = false, index?:number, context?:any){
     const  elem = useMemo(()=>{
-        return FormSlotValidJs(props, check_wrapper, index);
+        return FormSlotValidJs(props, check_wrapper, index, context);
     }, [props.elem]);
 
     return {elem}
