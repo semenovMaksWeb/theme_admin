@@ -48,7 +48,6 @@ export function Button(props:any){
             >
                 {button.text}
                 {icons}
-                {props?.context?.id}
             </button>
         </>
     )
