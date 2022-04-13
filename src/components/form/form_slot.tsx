@@ -46,7 +46,7 @@ export function FormSlotValidJs(props:any, check_wrapper = false, index?:number,
 export function FormSlot(props: any, check_wrapper = false, index?:number, context?:any){
     const  elem = useMemo(()=>{
         return FormSlotValidJs(props, check_wrapper, index, context);
-    }, [props.elem]);
+    }, [props.elem, context]);
 
     return {elem}
 }

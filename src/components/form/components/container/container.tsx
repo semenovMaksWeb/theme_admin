@@ -6,7 +6,7 @@ export function Container(props:any) {
     const { elem } = FormSlot({elem: props.elem.children, id_form:props.id_form}, false, props.index, props.context);
     const style = useMemo(()=>{
         return generatorStyleForm(props.elem.style, 'form__container')
-    }, [props.elem])
+    }, [props.elem]);
     return (<div className="form__container" style={style}>
         {elem}
     </div>)
