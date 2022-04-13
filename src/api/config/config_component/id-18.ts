@@ -184,6 +184,19 @@ export const id_18 = {
                                   disabled: true,
                                   order: 1,
                                   id_parent: 'rows_var_theme',
+                                  id: "id",
+                                  type: "input",
+                                  style_wrapper:{
+                                      margin: "0 10px 0 0"
+                                  },
+                                  label: {
+                                      text: "id переменной"
+                                  }
+                              },
+                              {
+                                  disabled: true,
+                                  order: 1,
+                                  id_parent: 'rows_var_theme',
                                   id: "name",
                                   type: "input",
                                   style_wrapper:{
@@ -228,6 +241,43 @@ export const id_18 = {
                                                           name: 'id',
                                                       },
                                                   }
+                                              }
+                                          },
+                                          {
+                                              name: "delete_rows_values_form",
+                                              params:{
+                                                  id_form: 18,
+                                                  values_key: "rows_var_theme",
+                                                  config: {
+                                                      id: {
+                                                          result: "all",
+                                                          type:1,
+                                                          id:18,
+                                                          name: 'id',
+                                                      },
+                                                  }
+                                              }
+                                          },
+                                          {
+                                              name: "update_manual",
+                                              params: {
+                                                  id_form: 18,
+                                                  id_select: "id",
+                                                  schema: {
+                                                      id: "id",
+                                                      name: 'name'
+                                                  },
+                                                  url:{
+                                                      url: "var_css_name_theme/get_insert", type: TypeApiMethods.get,
+                                                  },
+                                                  config:{
+                                                      id: {
+                                                          result: "params",
+                                                          type:4,
+                                                          name: 'id_theme',
+                                                          var_type: 'number',
+                                                      },
+                                                  },
                                               }
                                           },
                                       ]

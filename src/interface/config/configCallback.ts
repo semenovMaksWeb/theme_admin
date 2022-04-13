@@ -15,4 +15,5 @@ export enum CallbackName{
     update_manual="update_manual",
     reset_value_form_key="reset_value_form_key",
     add_rows_values_form="add_rows_values_form",
+    delete_rows_values_form="delete_rows_values_form",
 }

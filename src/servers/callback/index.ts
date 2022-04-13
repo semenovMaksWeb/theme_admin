@@ -7,6 +7,7 @@ import {router_push} from "./router_push";
 import {errorsBack} from "./errors-back";
 import {update_manual} from "./form/update_manual";
 import {add_rows_values_form} from "./form/add_rows_values_form";
+import {delete_rows_values_form} from "./form/delete_rows_values_form";
 
 export async function Callback(event:any, configCallback:ConfigCallback[], content:any={}, history?:any){
     if (event){
@@ -50,7 +51,10 @@ export async function Callback(event:any, configCallback:ConfigCallback[], conte
             await update_manual(config);
         }
         if (config.name === CallbackName.add_rows_values_form){
-            add_rows_values_form(config);
+            add_rows_values_form(config, content);
+        }
+        if (config.name === CallbackName.delete_rows_values_form){
+            delete_rows_values_form(config.params, content);
         }
     }
 }
