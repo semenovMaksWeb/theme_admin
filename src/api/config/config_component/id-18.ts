@@ -98,14 +98,26 @@ export const id_18 = {
                                        params:{
                                           id_form: 18,
                                           values_key: "rows_var_theme",
-                                           front_data: {
-                                               data:{
-                                                   result: "all",
-                                                   type:2,
-                                                   id:18,
-                                                   name: 'id',
-                                               }
+                                           url:{
+                                               url: "var_css_name_theme/id", type: TypeApiMethods.get,
                                            },
+                                           config:{
+                                                id:{
+                                                    result: "params",
+                                                    type:1,
+                                                    index:0,
+                                                    name: 'id',
+                                                    val_type: "number",
+                                                }
+                                           },
+                                           // front_data: {
+                                           //     data:{
+                                           //         result: "all",
+                                           //         type:2,
+                                           //         id:18,
+                                           //         name: 'id',
+                                           //     }
+                                           // },
                                        }
                                     },
                                     {
