@@ -28,7 +28,7 @@ export const id_18 = {
                     type: "container",
                     style:{
                       display: "flex",
-                      "align-items": "flex-end",
+                      "align-items": "flex-start",
                     },
                     children:[
                         {
@@ -78,6 +78,7 @@ export const id_18 = {
                                         name: "api",
                                         params:{
                                             url:{ url: "var_css_name_theme/save", type: TypeApiMethods.post},
+                                            errors: { id: 18 },
                                             config:{
                                                 id_var: {
                                                     result: "body",
