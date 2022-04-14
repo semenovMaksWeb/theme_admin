@@ -53,6 +53,9 @@ export const id_18 = {
                             },
                             loader_start: false,
                             type: "select",
+                            search:{
+                                type: "frond-end"
+                            },
                             label: {
                                 text: "Новая переменная"
                             }
@@ -192,19 +195,19 @@ export const id_18 = {
                          type: "container",
                           order:1,
                           children:[
-                              {
-                                  disabled: true,
-                                  order: 1,
-                                  id_parent: 'rows_var_theme',
-                                  id: "id",
-                                  type: "input",
-                                  style_wrapper:{
-                                      margin: "0 10px 0 0"
-                                  },
-                                  label: {
-                                      text: "id переменной"
-                                  }
-                              },
+                              // {
+                              //     disabled: true,
+                              //     order: 1,
+                              //     id_parent: 'rows_var_theme',
+                              //     id: "id",
+                              //     type: "input",
+                              //     style_wrapper:{
+                              //         margin: "0 10px 0 0"
+                              //     },
+                              //     label: {
+                              //         text: "id переменной"
+                              //     }
+                              // },
                               {
                                   disabled: true,
                                   order: 1,
