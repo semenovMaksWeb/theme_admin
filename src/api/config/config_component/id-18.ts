@@ -85,7 +85,7 @@ export const id_18 = {
                                                     type:2,
                                                     id:18,
                                                     name: 'id',
-                                                    val_type: "number",
+                                                    var_type: "number",
                                                     check_id: true,
                                                 },
                                                 id_theme: {
