@@ -1,6 +1,6 @@
 import React, {useMemo} from "react";
 import {style_all_result} from "../lib/create-dom/create-content";
-import {typeSchemaTable} from "../../../interface/type/typeSchemaTable";
+import {typeSchemaTable} from "../../../interface/type/table/typeSchemaTable";
 import {Button} from "../../button/button";
 
 // props dataset,  elem, class
@@ -15,7 +15,7 @@ export function Td(props:any){
             content = <> <Button id={props.elem.button} context={props.dataset}/></>;
         }
         return {style, content}
-    },[ props.dataset[props.elem.key] ])
+    },[ props.dataset[props.elem.key] ]);
 
     return (
         <div className={props.class} title={props.dataset[props.elem.key]}

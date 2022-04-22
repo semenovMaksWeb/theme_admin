@@ -1,6 +1,6 @@
 import {FrontData} from "../../interface/config/configFrontData";
 import {store} from "../../store"
-import {TypeComponents} from "../../interface/type/typeComponents";
+import {TypeComponents} from "../../interface/type/components/typeComponents";
 
 /**
  * @function fd_2

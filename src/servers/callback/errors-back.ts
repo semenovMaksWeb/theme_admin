@@ -1,5 +1,5 @@
 import {store} from "../../store";
-import {TypeComponents} from "../../interface/type/typeComponents";
+import {TypeComponents} from "../../interface/type/components/typeComponents";
 import {ComponentsTypes} from "../../store/type/components";
 import {Callback} from "./index";
 
