@@ -10,7 +10,7 @@ export function Option(props:any) {
         UpdateValuesForm(props.id_form, props.elem.id, {id:props.id, name: props.name})
     };
     return (
-        <div onClick={updateData} className="select__option" data-key={props.id}>
+        <div onMouseDown={updateData}  className="select__option" data-key={props.id}>
             {props.name}
         </div>
     )

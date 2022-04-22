@@ -1,6 +1,6 @@
 .form__container{
-    --form__container_display: "block";
-    --form__container_align-items: "flex-start";
+    --form__container_display: block;
+    --form__container_align-items: center;
     display: var(--form__container_display);
     align-items: var(--form__container_align-items);
     margin: var(--form__wrapper-margin);

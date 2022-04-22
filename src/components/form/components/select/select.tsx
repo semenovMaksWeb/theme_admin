@@ -27,10 +27,19 @@ export function Select(props:any) {
         }
         visibleSave(true);
     };
+    const [search, searchSave] = useState("");
     const arrayOption = useMemo(()=>{
-        const arrayOption = [];
+        // поиск есть
+        let arrayOption = [];
+        let data = form.manual[props.elem.id];
+        if (search !== ""){
+            // поиск нужен на стороне фронта
+            if (props?.elem?.search?.type === "frond-end"){
+                data = form.manual[props.elem.id].filter((e:any)=> e.name.toLowerCase().includes(search.toLowerCase()));
+            }
+        }
         if (form.manual[props.elem.id]){
-            for(const option of form.manual[props.elem.id]){
+            for(const option of data){
                 arrayOption.push(
                     <Option
                         key={option.id}
@@ -43,30 +52,43 @@ export function Select(props:any) {
             }
         }
         return arrayOption;
-    }, [form.manual[props.elem.id]]);
+    }, [form.manual[props.elem.id], search ]);
     const blurSelect = (e:any)=>{
-        console.log(e);
+        if (search){
+            const newValue = form.manual[props.elem.id].filter((e:any)=> e.name === search)[0];
+            if (newValue){
+                UpdateValuesForm(props.id_form, props.elem.id, newValue);
+            }else {
+                UpdateValuesForm(props.id_form, props.elem.id, {id:0});
+            }
+        }
+        searchSave("");
         visibleSave(false);
     };
+    // изменить значение в input
     const updateData=(event:any)=>{
-        UpdateValuesForm(props.id_form, props.elem.id, event.target.value)
+        // поиск нужно выполнять на стороне фронта!
+        searchSave(event.target.value);
     };
     const value = useMemo(()=>{
+        if (search !== ""){
+            return  search;
+        }
         const res = formValueCheck(props, form);
         if (res.name){
             return res.name;
         }
         return  "";
-    }, [form.values[props.elem.id]]);
-    // onBlur={blurSelect}
+    }, [form.values[props.elem.id], search] );
+    //
     return <>
         <div className="select">
             <input
                 onFocus={focusSelect}
                 onChange={updateData}
+                onBlur={blurSelect}
                 value={value}
                 className="select__input"
-                title="Выберите переменую которую хотите добавить в тему"
             />
             {visible ?
                 <div className="select__wrapper-option">
