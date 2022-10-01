@@ -6,9 +6,10 @@ import {Button} from "../button/button";
 import {Select} from "./components/select/select";
 import {Container} from "./components/container/container";
 import {Rows} from "./components/rows/rows";
+import {ContextType} from "../../interface/type/ContextType";
 
 
-export function FormSlotValidJs(props:any, check_wrapper = false, index?:number, context?:any) {
+export function FormSlotValidJs(props:any, check_wrapper = false, index?:number, context?:ContextType) {
     const elem:any  = [];
     for (const e of props.elem) {
         if (e.type === "fieldset"){
@@ -43,7 +44,7 @@ export function FormSlotValidJs(props:any, check_wrapper = false, index?:number,
 }
 
 
-export function FormSlot(props: any, check_wrapper = false, index?:number, context?:any){
+export function FormSlot(props: any, check_wrapper = false, index?:number, context?:ContextType){
     const  elem = useMemo(()=>{
         return FormSlotValidJs(props, check_wrapper, index, context);
     }, [props.elem, context]);

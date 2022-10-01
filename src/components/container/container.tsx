@@ -3,6 +3,10 @@ import {useTypeSelector} from "../../hook/use-typed-selector";
 import {slot} from "../slot/slot";
 import "./container.css"
 
+export interface ContainerProps {
+    
+}
+
 export function Container(props:any){
     const  components = useTypeSelector(state => state.components.components);
     const container:any = components[props.id];

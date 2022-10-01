@@ -5,19 +5,28 @@ import "./button.css"
 import {Callback} from "../../servers/callback";
 import {componentsStyle} from "../../servers/css/components_style";
 import {Svg} from "../svg/svg";
-export function Button(props:any){
+import {ContextType} from "../../interface/type/ContextType";
+
+export interface ButtonProps {
+    id?:number,
+    elem?:any,
+    context?:ContextType,
+    id_form?:number
+}
+
+export function Button(props:ButtonProps){
     const history = useHistory();
     const  components = useTypeSelector(state => state.components.components);
     // кнопка пропсом или глобальной cms
     const button = useMemo(()=>{
         let button:any;
-        if (!props.elem){
-            button = components[props.id];
+        if (!props.elem && props.id){
+            button = components[props?.id];
         }else {
             button = props.elem;
         }
         return button;
-    }, [props.elem, components[props.id]] );
+    }, [props.elem, props?.id] );
     // проверка нужно ли рисовать в кнопке иконку
     const icons = useMemo(()=>{
         let icons:JSX.Element = <></>;
@@ -28,14 +37,14 @@ export function Button(props:any){
             icons =  <img src={button.icons.url} alt={button.icons.url} />
         }
         return icons;
-    },[button])
+    },[button]);
 
     if (!button){
         return  (<><div>кнопка не иницилизирована!</div> </>)
     }
     const clickButton = async (event:any)=>{
         await Callback(event,button?.event?.click, props.context, history);
-    }
+    };
     const {components_style} = componentsStyle(button);
     return(
         <>

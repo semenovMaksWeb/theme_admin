@@ -4,12 +4,13 @@ import {fd_2} from "./fd_2";
 import {fd_3} from "./fd_3";
 import {fd_4} from "./fd_4";
 import {validateData} from "./validate_data";
+import {ContextType} from "../../interface/type/ContextType";
 
 /**
  *@function frontData
  * функция универсальная точка входа получение данных на фронте для дальшейней её обработки
  */
-export function frontData(configFrontData:ConfigFrontData, content:any){
+export function frontData(configFrontData:ConfigFrontData, content:ContextType){
     const params:any = {};
     const body:any = {};
     const all:any = {};

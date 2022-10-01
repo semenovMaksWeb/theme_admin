@@ -4,12 +4,18 @@ import "./alert.css"
 import {images} from "../../servers/images/images";
 import {store} from "../../store";
 import {AlertTypes} from "../../store/type/alert";
-export function Alert(props:any){
+
+export  interface AlertProps{
+    index: number,
+}
+
+
+export function Alert(props:AlertProps){
     const  alert = useTypeSelector(state => state.alert.alert[props.index]);
     const className = `${alert.type} alert`;
     const click = ()=> {
         store.dispatch({type:AlertTypes.DELETE_ALERT, payload: {index:props.index}});
-    }
+    };
     return(
         <>
             <div className={className}>
